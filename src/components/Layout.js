@@ -1,12 +1,57 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import TransformationHeader from './headers/TransformationHeader'
-import CoachHeader from './headers/CoachHeader'
-import TransformationFooter from './footers/TransformationFooter'
-import CoachFooter from './footers/CoachFooter'
+import { useState, useEffect } from 'react'
+
+// Import headers and footers with error handling
+let TransformationHeader, CoachHeader, TransformationFooter, CoachFooter
+
+try {
+  TransformationHeader = require('./headers/TransformationHeader').default
+} catch (error) {
+  console.warn('TransformationHeader not found, using fallback')
+  TransformationHeader = () => <div>Header Loading...</div>
+}
+
+try {
+  CoachHeader = require('./headers/CoachHeader').default
+} catch (error) {
+  console.warn('CoachHeader not found, using fallback')
+  CoachHeader = () => <div>Header Loading...</div>
+}
+
+try {
+  TransformationFooter = require('./footers/TransformationFooter').default
+} catch (error) {
+  console.warn('TransformationFooter not found, using fallback')
+  TransformationFooter = () => <div>Footer Loading...</div>
+}
+
+try {
+  CoachFooter = require('./footers/CoachFooter').default
+} catch (error) {
+  console.warn('CoachFooter not found, using fallback')
+  CoachFooter = () => <div>Footer Loading...</div>
+}
 
 export default function Layout({ children, title, description, siteType = 'transformation' }) {
   const router = useRouter()
+  const [mounted, setMounted] = useState(false)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Don't render until mounted to avoid hydration issues
+  if (!mounted) {
+    return (
+      <>
+        <Head>
+          <title>Loading...</title>
+        </Head>
+        <div>Loading...</div>
+      </>
+    )
+  }
   
   // Determine which site we're on based on the route
   const isCoachingSite = router.pathname.startsWith('/frankfurt-business-coach')
