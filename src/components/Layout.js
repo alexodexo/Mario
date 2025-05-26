@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
+import CookieBanner from './common/CookieBanner'
 
 // Import headers and footers with error handling
 let TransformationHeader, CoachHeader, TransformationFooter, CoachFooter
@@ -48,13 +49,21 @@ export default function Layout({ children, title, description, siteType = 'trans
         <Head>
           <title>Loading...</title>
         </Head>
-        <div>Loading...</div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading...</p>
+          </div>
+        </div>
       </>
     )
   }
   
   // Determine which site we're on based on the route
   const isCoachingSite = router.pathname.startsWith('/frankfurt-business-coach')
+  const isLegalPage = ['/impressum', '/datenschutz', '/agb'].includes(router.pathname)
+  
+  // For legal pages, use transformation theme by default unless explicitly coaching
   const currentSiteType = isCoachingSite ? 'coaching' : 'transformation'
   
   // Default titles and descriptions
@@ -83,6 +92,7 @@ export default function Layout({ children, title, description, siteType = 'trans
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="de_DE" />
+        <meta property="og:site_name" content="Mario Egartner - Excellence in Transformation" />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -95,14 +105,20 @@ export default function Layout({ children, title, description, siteType = 'trans
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         
-        {/* Preconnect for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* Theme Color */}
+        <meta name="theme-color" content="#2563eb" />
+        
+        {/* Additional SEO */}
+        <meta name="language" content="de" />
+        <meta name="geo.region" content="DE-HE" />
+        <meta name="geo.placename" content="Frankfurt am Main" />
+        <meta name="geo.position" content="50.1109;8.6821" />
+        <meta name="ICBM" content="50.1109, 8.6821" />
       </Head>
 
       <div className="min-h-screen flex flex-col bg-gray-50">
         {/* Dynamic Header based on site type */}
-        {currentSiteType === 'coaching' ? (
+        {(currentSiteType === 'coaching' && !isLegalPage) ? (
           <CoachHeader />
         ) : (
           <TransformationHeader />
@@ -114,11 +130,14 @@ export default function Layout({ children, title, description, siteType = 'trans
         </main>
         
         {/* Dynamic Footer based on site type */}
-        {currentSiteType === 'coaching' ? (
+        {(currentSiteType === 'coaching' && !isLegalPage) ? (
           <CoachFooter />
         ) : (
           <TransformationFooter />
         )}
+        
+        {/* Cookie Banner - appears on all pages */}
+        <CookieBanner />
       </div>
     </>
   )
