@@ -1,76 +1,99 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
-  // HIER Dark-Mode aktiviert (auf Basis der CSS-Klasse "dark")
+  // Dark-Mode aktiviert (auf Basis der CSS-Klasse "dark")
   darkMode: "class",
 
   theme: {
     extend: {
       fontFamily: {
         // Überschreibt die default "sans"-Familie für Tailwind
-        sans: ['Poppins', 'sans-serif']
+        sans: ['Inter', 'sans-serif']
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // Custom color system for Mario Egartner websites
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+        },
+        navy: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+        },
+        accent: {
+          50: '#fef7ed',
+          100: '#fdedd5',
+          200: '#fbd8aa',
+          300: '#f9bc74',
+          400: '#f6963c',
+          500: '#f56e21', // Main accent color from CSS variables
+          600: '#ea540c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+        },
       },
-      // Hinzufügen von benutzerdefinierten Keyframes
+      // Container utilities
+      maxWidth: {
+        'container': '1200px',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+      },
+      // Animation keyframes
       keyframes: {
         'fade-in': {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        'slide-in': {
-          '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+        'slide-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        'bounce-in': {
-          '0%, 20%, 50%, 80%, 100%': {
-            transform: 'translateY(0)',
-            opacity: '1',
-          },
-          '40%': {
-            transform: 'translateY(-30px)',
-            opacity: '1',
-          },
-          '60%': {
-            transform: 'translateY(-15px)',
-            opacity: '1',
-          },
+        'slide-in-right': {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
         },
-        'scale-up': {
-          '0%': { transform: 'scale(0.95)', opacity: '0' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
+        'scale-in': {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
-        'slide-from-left': {
-          '0%': { transform: 'translateX(-50px)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
-        },
-        'slide-from-right': {
-          '0%': { transform: 'translateX(30px)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
-        },
-        blink: {
-          '0%, 100%': { opacity: 1 },
-          '50%': { opacity: 0 },
-        }
       },
-      // Definieren der benutzerdefinierten Animationen
       animation: {
-        'fade-in': 'fade-in 0.5s ease-out forwards',
-        'slide-in': 'slide-in 0.5s ease-out forwards',
-        'bounce-in': 'bounce-in 1s ease-out forwards',
-        'scale-up': 'scale-up 0.5s ease-out forwards',
-        'slide-from-left': 'slide-from-left 0.7s ease-out forwards',
-        'slide-from-right': 'slide-from-right 0.7s ease-out forwards',
-        blink: 'blink 1s step-end infinite',
+        'fade-in': 'fade-in 0.6s ease-out forwards',
+        'slide-up': 'slide-up 0.6s ease-out forwards',
+        'slide-in-right': 'slide-in-right 0.6s ease-out forwards',
+        'scale-in': 'scale-in 0.5s ease-out forwards',
+      },
+      // Typography
+      fontSize: {
+        'hero': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
       },
     },
   },
   plugins: [],
-};
+}
+
+export default config

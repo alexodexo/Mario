@@ -3,32 +3,28 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 
-export default function CoachHeader() {
+export default function TransformationHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const router = useRouter()
 
   const navigation = [
     { 
-      name: 'Coach', 
-      href: '/frankfurt-business-coach/coach' 
+      name: 'Über uns', 
+      href: '/transformationskontinuum/ueber-uns' 
     },
     { 
       name: 'Leistungen', 
-      href: '/frankfurt-business-coach/leistungen' 
-    },
-    { 
-      name: 'Preise', 
-      href: '/frankfurt-business-coach/preise' 
+      href: '/transformationskontinuum/leistungen' 
     },
     { 
       name: 'Kontakt', 
-      href: '/frankfurt-business-coach/kontakt' 
+      href: '/transformationskontinuum/kontakt' 
     }
   ]
 
   const isActiveLink = (href) => {
-    if (href === '/frankfurt-business-coach') {
-      return router.pathname === '/frankfurt-business-coach'
+    if (href === '/transformationskontinuum') {
+      return router.pathname === '/transformationskontinuum'
     }
     return router.pathname.startsWith(href)
   }
@@ -46,11 +42,11 @@ export default function CoachHeader() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>egartner@frankfurt-business-coach.de</span>
+                <span>info@c5-business-partner.de</span>
               </div>
             </div>
             <div className="text-sm">
-              Abend- und Samstagstermine nach Absprache
+              Excellence in Transformation
             </div>
           </div>
         </div>
@@ -60,9 +56,9 @@ export default function CoachHeader() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/frankfurt-business-coach" className="flex items-center">
+            <Link href="/transformationskontinuum" className="flex items-center">
               <div className="text-xl lg:text-2xl font-bold text-navy-900">
-                Frankfurt <span className="text-primary-600">Business Coach</span>
+                C5 <span className="text-primary-600">Business Partner</span>
               </div>
             </Link>
           </div>
@@ -85,10 +81,10 @@ export default function CoachHeader() {
             
             {/* CTA Button */}
             <Link
-              href="/frankfurt-business-coach/kontakt"
+              href="/transformationskontinuum/kontakt"
               className="btn-primary ml-4"
             >
-              Termin vereinbaren
+              Beratung anfragen
             </Link>
           </div>
 
@@ -123,7 +119,7 @@ export default function CoachHeader() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>egartner@frankfurt-business-coach.de</span>
+                  <span>info@c5-business-partner.de</span>
                 </div>
               </div>
             </div>
@@ -146,11 +142,11 @@ export default function CoachHeader() {
             {/* Mobile CTA Button */}
             <div className="pt-4">
               <Link
-                href="/frankfurt-business-coach/kontakt"
+                href="/transformationskontinuum/kontakt"
                 className="btn-primary w-full justify-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Termin vereinbaren
+                Beratung anfragen
               </Link>
             </div>
           </div>
