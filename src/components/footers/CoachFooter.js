@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Clock, Linkedin, Xing } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Linkedin } from 'lucide-react'
 
 export default function CoachFooter() {
   const serviceAreas = [
@@ -164,6 +164,7 @@ export default function CoachFooter() {
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
+                {/* Custom Xing SVG Icon */}
                 <a
                   href="https://www.xing.com/profile/Mario_Egartner"
                   target="_blank"
@@ -171,7 +172,9 @@ export default function CoachFooter() {
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label="Xing Profil von Mario Egartner"
                 >
-                  <Xing className="h-5 w-5" />
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536L14.421 13.7c-.193-.26-.193-.432 0-.66L19.825.874c.193-.9.193-.346.105-.534C19.852.078 19.688 0 19.477 0h-1.289zm-7.754 13.428c-.207 0-.37.093-.463.25-.09.151-.090.346.009.534l1.232 2.262c.193.26.193.432 0 .66l-2.395 4.364c-.193.26-.193.432 0 .66C8.912 19.93 9.075 20 9.286 20h3.454c.207 0 .37-.093.463-.25.090-.151.090-.346-.009-.534l-2.874-5.199c-.193-.26-.193-.432 0-.66l3.663-6.684c.207-.370.207-.61 0-.98L11.111.874c-.193-.26-.436-.660-.967-.66H6.69c-.211 0-.375.093-.463.25-.089.151-.089.346.009.534l2.463 4.516c.193.26.193.432 0 .66z"/>
+                  </svg>
                 </a>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Building2, User, Target, Users, Briefcase, GraduationCap, Phone, Mail } from 'lucide-react'
+import { ArrowRight, Users, User, Target, CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
 
 export default function HomePage() {
   const websites = [
@@ -7,7 +7,7 @@ export default function HomePage() {
       title: 'C5 Business Partner',
       subtitle: 'Transformationskontinuum',
       description: 'Ganzheitliche Unternehmensberatung für Organisationen, Teams und Führungskräfte. Spezialisiert auf Kulturanalyse, strategische Transformation und nachhaltige Veränderungsprozesse.',
-      icon: Building2,
+      icon: Users,
       href: '/transformationskontinuum',
       target: 'Unternehmen & Organisationen',
       features: [
@@ -46,20 +46,38 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-primary-900 text-white overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-black/20" />
+      {/* Hero Section with Video Background */}
+      <section className="relative text-white overflow-hidden min-h-screen flex items-center">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source 
+              src="https://fastly-signed-us-east-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/1971571337001/b5cd680e-938d-4b44-9083-d3e5d7eb3ca5/117d8dd0-356e-4035-83a0-99fa3e4987c1/main.mp4?fastly_token=NjgzNTJjNzJfODJiZjdhZWFjYzE1OTk4MjEwYzJhMWZiOTFmZGMwMzkyMmM5MjM2NjAwMGJkYjRmMjgyMjk2YTYzMWMyYWE4MF8vL2Zhc3RseS1zaWduZWQtdXMtZWFzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMTk3MTU3MTMzNzAwMS9iNWNkNjgwZS05MzhkLTRiNDQtOTA4My1kM2U1ZDdlYjNjYTUvMTE3ZDhkZDAtMzU2ZS00MDM1LTgzYTAtOTlmYTNlNDk4N2MxL21haW4ubXA0" 
+              type="video/mp4" 
+            />
+          </video>
+          {/* Dark Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/60" />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-navy-900/80 via-navy-800/60 to-primary-900/80" />
+        </div>
         
-        <div className="container-width section-padding relative">
+        <div className="container-width section-padding relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in drop-shadow-lg">
                 Mario Egartner
               </h1>
-              <p className="text-2xl sm:text-3xl text-primary-200 font-semibold mb-8 animate-slide-up animation-delay-200">
+              <p className="text-2xl sm:text-3xl text-primary-200 font-semibold mb-8 animate-slide-up animation-delay-200 drop-shadow-md">
                 Excellence in Transformation
               </p>
-              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-400">
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-400 drop-shadow-sm">
                 Willkommen! Ich begleite Unternehmen und Menschen bei Transformationsprozessen. 
                 Wählen Sie den passenden Bereich für Ihr Anliegen.
               </p>
@@ -69,16 +87,16 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up animation-delay-600">
               <Link
                 href="/transformationskontinuum"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-white border border-transparent rounded-lg shadow-lg hover:bg-gray-50 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-white border border-transparent rounded-lg shadow-lg hover:bg-gray-50 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group backdrop-blur-sm"
               >
-                <Building2 className="mr-3 h-6 w-6" />
+                <Users className="mr-3 h-6 w-6" />
                 Für Unternehmen
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               
               <Link
                 href="/frankfurt-business-coach"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white rounded-lg hover:bg-white hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
               >
                 <User className="mr-3 h-6 w-6" />
                 Für Privatpersonen
