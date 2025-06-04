@@ -68,8 +68,8 @@ export default function TransformationContact() {
       city: '60389 Frankfurt am Main',
       district: 'Nordend / Bornheim / Mitte'
     },
-    phone: '069 - 9753 4441',
-    email: 'info@c5-business-partner.de',
+    phone: '069 - 9753 4440',
+    email: 'berater@c5-business-partner.de',
     hours: {
       weekdays: 'Mo-Fr: 9:00 - 18:00 Uhr',
       flexible: 'Termine außerhalb der Geschäftszeiten nach Absprache'
@@ -84,7 +84,7 @@ export default function TransformationContact() {
         description="Lassen Sie uns über Ihre Herausforderungen sprechen. Wir freuen uns auf ein unverbindliches Erstgespräch mit Ihnen."
         primaryCTA={{
           text: 'Direkt anrufen',
-          href: 'tel:069-97534441'
+          href: 'tel:069-97534440'
         }}
         secondaryCTA={{
           text: 'E-Mail senden',
@@ -340,38 +340,7 @@ export default function TransformationContact() {
         </div>
       </section>
 
-      {/* Calendly Integration Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-width">
-          <div className="text-center mb-12">
-            <h2 className="section-title">Termin online buchen</h2>
-            <p className="section-subtitle">
-              Buchen Sie direkt einen passenden Termin für Ihr Erstgespräch
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              {/* Placeholder for Calendly Integration */}
-              <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <Clock className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-500">Calendly-Widget wird hier eingebettet</p>
-                  <p className="text-sm text-gray-400 mt-2">
-                    Ermöglicht direkte Terminbuchung für Erstgespräche
-                  </p>
-                </div>
-              </div>
-              
-              <div className="text-sm text-gray-500">
-                <p>• Kostenfreies 30-minütiges Erstgespräch</p>
-                <p>• Wahlweise persönlich in Frankfurt oder online</p>
-                <p>• Flexible Terminauswahl</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Contact CTA Section */}
       <section className="section-padding bg-primary-600 text-white">
@@ -414,7 +383,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Kontakt - C5 Business Partner',
-      description: 'Kontaktieren Sie C5 Business Partner für eine unverbindliche Beratung. Telefon: 069 - 9753 4441 oder besuchen Sie uns in Frankfurt am Main.'
+      description: 'Kontaktieren Sie C5 Business Partner für eine unverbindliche Beratung. Telefon: 069 - 9753 4440 oder besuchen Sie uns in Frankfurt am Main.'
     }
   }
 }

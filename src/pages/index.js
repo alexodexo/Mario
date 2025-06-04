@@ -87,7 +87,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-">
                 Transformationskontinuum
               </h1>
               <p className="text-2xl sm:text-3xl text-blue-200 font-semibold mb-8 drop-shadow-md">
@@ -337,7 +337,7 @@ export default function HomePage() {
                   <div className="text-4xl sm:text-5xl font-bold text-orange-400 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 font-medium">
+                  <div className="text-gray-800 font-medium">
                     {stat.label}
                   </div>
                 </div>
