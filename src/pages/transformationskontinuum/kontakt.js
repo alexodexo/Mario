@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle, Calendar } from 'lucide-react'
-import FAQSection from '../../components/common/FAQSection'
 
 export default function TransformationContact() {
   const [formData, setFormData] = useState({
@@ -378,31 +377,6 @@ export default function TransformationContact() {
                       <p className="text-xs">{contactInfo.hours.flexible}</p>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Call to Action Box - Kompakter */}
-              <div className="mt-8 bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200">
-                <h3 className="text-lg font-bold text-blue-900 mb-2">
-                  Lieber persönlich sprechen?
-                </h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  Rufen Sie uns direkt an oder vereinbaren Sie einen Rückruf-Termin. 
-                  Wir nehmen uns gerne Zeit für Ihr Anliegen.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <a
-                    href={`tel:${contactInfo.phone.replace(/\s|-/g, '')}`}
-                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 border border-transparent rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 flex-1"
-                  >
-                    Jetzt anrufen
-                  </a>
-                  <button 
-                    onClick={scrollToBooking}
-                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-lg shadow hover:bg-blue-50 transition-colors duration-200 flex-1"
-                  >
-                    Termin buchen
-                  </button>
                 </div>
               </div>
             </div>

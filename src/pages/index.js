@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Users, User, Target, CheckCircle, Phone, Mail, MapPin, Star, TrendingUp, Award, Shield, Eye, Heart, Compass, Handshake } from 'lucide-react'
+import { ArrowRight, Users, User, Target, CheckCircle, Phone, Mail, MapPin, Star, TrendingUp, Award, Shield, Eye, Heart, Compass, Handshake, HeartHandshake } from 'lucide-react'
 
 export default function HomePage() {
   // Die 5 Cs nach Warren Bennis - Neue Kernwerte
@@ -37,7 +37,7 @@ export default function HomePage() {
       image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
     },
     {
-      icon: Handshake,
+      icon: HeartHandshake,
       title: 'Glaubwürdigkeit',
       subtitle: 'Congruity',
       description: 'Übereinstimmung zwischen Worten und Taten, zwischen Versprechen und Erfüllung. Unsere langjährige Erfolgsbilanz spricht für sich und macht uns zu einem verlässlichen Partner.',
