@@ -8,21 +8,24 @@ export default function CoachHome() {
   const services = [
     {
       icon: Briefcase,
-      title: 'Business Coaching',
-      description: 'Professionelle Begleitung bei beruflichen Herausforderungen, Karriereplanung und Führungsthemen.',
-      features: ['Karriereentwicklung', 'Führungskompetenzen', 'Work-Life-Balance']
+      title: 'Business Coaching (B2C)',
+      description: 'Individuelle Begleitung bei beruflichen Herausforderungen, Karriereplanung und persönlichen Entwicklungszielen außerhalb des Unternehmenskontexts.',
+      features: ['Karriereentwicklung', 'Work-Life-Balance', 'Persönlichkeitsentwicklung'],
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
     },
     {
       icon: Users,
-      title: 'Beratung',
-      description: 'Systemische Beratung für komplexe Situationen und Entscheidungsfindung in beruflichen und privaten Bereichen.',
-      features: ['Systemische Beratung', 'Entscheidungsfindung', 'Konfliktlösung']
+      title: 'Systemische Beratung & KI-Integration',
+      description: 'Innovative Verbindung von systemischer Beratung mit KI-unterstützten Coaching-Tools. Vertrauensvolle Mensch-zu-Mensch UND Mensch-zu-Maschine Kommunikation.',
+      features: ['Systemische Beratung', 'KI-Chatbot & Voicebot', 'Paartherapie'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
     },
     {
       icon: GraduationCap,
-      title: 'Training',
-      description: 'Maßgeschneiderte Trainings und Workshops für individuelle Kompetenzentwicklung.',
-      features: ['Kommunikationstraining', 'Präsentationsskills', 'Persönlichkeitsentwicklung']
+      title: 'Individuelles Training',
+      description: 'Maßgeschneiderte Trainings und Workshops für individuelle Kompetenzentwicklung mit modernster Technologie-Unterstützung.',
+      features: ['Kommunikationstraining', 'Präsentationsskills', 'Digitale Lernbegleitung'],
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
     }
   ]
 
@@ -57,12 +60,22 @@ export default function CoachHome() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="hero-text mb-6">
-                Excellence in <span className="text-primary-400">Transformation</span>
+                Frankfurt <span className="text-primary-400">Business Coach</span>
               </h1>
-              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                Als Ihr Business Coach in Frankfurt begleite ich Sie professionell und diskret 
-                bei beruflichen und privaten Herausforderungen.
+              <p className="text-2xl sm:text-3xl text-primary-200 font-semibold mb-6">
+                Individuelles Coaching mit KI-Innovation
               </p>
+              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+                Persönliche Begleitung bei beruflichen und privaten Herausforderungen. 
+                Als Pionier verbinde ich vertrauensvolle Mensch-zu-Mensch Kommunikation mit 
+                innovativer KI-Technologie für optimale Ergebnisse.
+              </p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white/20">
+                <p className="text-primary-200 font-medium">
+                  <strong>Innovation:</strong> Einzigartiger Dialog durch Chatbot & Voicebot - 
+                  gleichwertig zu persönlichen Gesprächen mit Mario Egartner
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/frankfurt-business-coach/kontakt"
@@ -72,10 +85,10 @@ export default function CoachHome() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
-                  href="/frankfurt-business-coach/coach"
+                  href="/frankfurt-business-coach/leistungen"
                   className="btn-outline border-white text-white hover:bg-white hover:text-navy-900"
                 >
-                  Über mich erfahren
+                  KI-Integration entdecken
                 </Link>
               </div>
             </div>
@@ -97,7 +110,7 @@ export default function CoachHome() {
           <div className="text-center mb-16">
             <h2 className="section-title">Beratung, Coaching, Training</h2>
             <p className="section-subtitle">
-              Professionelle Unterstützung für Ihre berufliche und persönliche Entwicklung
+              Professionelle Unterstützung für Ihre berufliche und persönliche Entwicklung mit innovativer KI-Integration
             </p>
           </div>
 
@@ -109,6 +122,15 @@ export default function CoachHome() {
                   key={index}
                   className={`bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-2xl transition-all duration-300 animate-slide-up animation-delay-${index * 200}`}
                 >
+                  {/* Service Image */}
+                  <div className="aspect-video mb-6 rounded-lg overflow-hidden shadow-md">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 mb-6">
                     <IconComponent className="h-8 w-8" />
                   </div>
@@ -125,6 +147,30 @@ export default function CoachHome() {
                 </div>
               )
             })}
+          </div>
+
+          {/* KI-Innovation Highlight */}
+          <div className="mt-16 bg-gradient-to-br from-primary-50 to-navy-50 rounded-xl p-8 border border-primary-200">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">
+                Pionier im KI-unterstützten Coaching
+              </h3>
+              <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+                Als Frankfurt Business Coach biete ich nicht nur traditionelles Coaching, sondern auch 
+                innovative KI-Lösungen: Chatbot und Voicebot ermöglichen gleichwertigen Dialog zu 
+                persönlichen Gesprächen - 24/7 verfügbar für Ihre Entwicklung.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <h4 className="font-semibold text-primary-600 mb-2">Mensch-zu-Mensch</h4>
+                  <p className="text-sm text-gray-600">Vertrauensvolle persönliche Gespräche mit Mario Egartner</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <h4 className="font-semibold text-primary-600 mb-2">Mensch-zu-Maschine</h4>
+                  <p className="text-sm text-gray-600">KI-basierte Chatbot & Voicebot Unterstützung</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
