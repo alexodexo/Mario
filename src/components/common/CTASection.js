@@ -27,8 +27,8 @@ export default function CTASection({
         href: '/transformationskontinuum/ueber-uns'
       },
       contact: {
-        phone: '069 - 9753 4441',
-        email: 'info@c5-business-partner.de'
+        phone: '069 - 9753 4440',
+        email: 'berater@c5-business-partner.de'
       }
     },
     coaching: {
@@ -43,7 +43,7 @@ export default function CTASection({
         href: '/frankfurt-business-coach/coach'
       },
       contact: {
-        phone: '069 - 9753 4441',
+        phone: '069 - 9753 4440',
         email: 'egartner@frankfurt-business-coach.de'
       }
     }

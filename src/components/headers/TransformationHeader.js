@@ -38,11 +38,11 @@ export default function TransformationHeader() {
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>069 - 9753 4441</span>
+                <span>069 - 9753 4440</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@c5-business-partner.de</span>
+                <span>berater@c5-business-partner.de</span>
               </div>
             </div>
             <div className="text-sm">
@@ -56,7 +56,7 @@ export default function TransformationHeader() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/transformationskontinuum" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <div className="text-xl lg:text-2xl font-bold text-navy-900">
                 C5 <span className="text-primary-600">Business Partner</span>
               </div>
@@ -115,11 +115,11 @@ export default function TransformationHeader() {
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>069 - 9753 4441</span>
+                  <span>069 - 9753 4440</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>info@c5-business-partner.de</span>
+                  <span>berater@c5-business-partner.de</span>
                 </div>
               </div>
             </div>
