@@ -87,7 +87,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 drop-shadow bg-orange-600 text-white px-4 py-2 inline-block">
+    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold rounded-xl mb-6 drop-shadow bg-orange-600 text-white px-4 py-2 inline-block">
       Transformationskontinuum
     </h1>
               <p className="text-2xl sm:text-3xl text-blue-200 font-semibold mb-8 drop-shadow-md">
@@ -99,26 +99,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Quick Navigation */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link
-                href="/transformationskontinuum"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-blue-900 bg-white border border-transparent rounded-lg shadow-lg hover:bg-gray-50 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group backdrop-blur-sm"
-              >
-                <Target className="mr-3 h-6 w-6" />
-                C5 Business Partner
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
-
-              <Link
-                href="/frankfurt-business-coach"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white rounded-lg hover:bg-white hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
-              >
-                <User className="mr-3 h-6 w-6" />
-                Frankfurt Business Coach
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -374,13 +355,12 @@ export default function HomePage() {
       </section>
 
       {/* Strategy, Planning & Contact - Combined Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-5 bg-blue-600 text-white">
             
           {/* Contact Section */}
-          <div className="border-t border-white/20 pt-16">
+          <div className=" border-white/20 pt-16">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-5xl font-bold mb-6 drop-shadow bg-orange-600 text-white px-4 py-2 inline-block">
+              <h2 className="text-5xl font-bold mb-6 drop-shadow rounded-xl bg-orange-600 text-white px-4 py-2 inline-block">
                 Lassen Sie uns sprechen
               </h2>
               <p className="text-xl text-blue-100 mb-12 leading-relaxed">
@@ -422,16 +402,10 @@ export default function HomePage() {
                     Strategiegespräch vereinbaren
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
-                  <Link
-                    href="/transformationskontinuum/ueber-uns"
-                    className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white rounded-lg hover:bg-white/30 transition-colors duration-200"
-                  >
-                    Unser Team kennenlernen
-                  </Link>
+                  
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
     </>

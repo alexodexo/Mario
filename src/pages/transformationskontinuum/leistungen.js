@@ -9,7 +9,7 @@ export default function TransformationServices() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Unsere Dienstleistungen"
+        title="Unsere Leistungen"
         description="Erfahren Sie mehr über unsere Dienstleistungen, die das Transformationskontinuum von C5 ausmachen."
         primaryCTA={{
           text: 'Kontaktiere uns',
@@ -136,33 +136,31 @@ export default function TransformationServices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-                Innovative KI-Coaching-Technologie
-              </h2>
+                Mitarbeiter begleiten               </h2>
               <p className="text-gray-700 mb-6">
-                Unsere innovative KI-Coaching-Technologie kombiniert Maria Voicebot und Mario Egartner zur individuellen und messbaren Transformation von Organisationen und Einzelpersonen.
+                Ihre Mitarbeiter unterstüzen Ihr Potenzialen zu entfalten, in Krisen zu begleiten und Veränderungen anzunehmen.
               </p>
               <p className="text-gray-700 mb-8">
-                Durch unsere innovativen Technologien und Coaching-Tools können wir eine nachhaltige Veränderung auf organisatorischer und individueller Ebene gewährleisten.
-              </p>
+                Neben der klassischen Karriereplanung beraten wir Sie vor Auswahlgesprächen und Gehaltsverhandlungen, begleiten Sie als Führungspersönlichkeit bis hin zu einer beruflichen Neuorientierung. Als Berater und Coach stehen wir Ihnen in diesen vielfach entscheidenden Momenten zur Seite.                </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start space-x-3">
                   <Brain className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Innovative KI-Coaching-Technologie</span>
+                  <span className="text-gray-700">Eignungsdiagnostik - Standortbestimmung</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Users className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Individuelle und messbare Transformation</span>
+                  <span className="text-gray-700">Coaching - Potenzialentwicklung und Krisenbegleitung</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Cog className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Integration von Maria Voicebot und Coaches</span>
+                  <span className="text-gray-700">Outplacement - Veränderungsbegleitung</span>
                 </li>
               </ul>
               <Link
                 href="/transformationskontinuum/kontakt"
                 className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-primary-600 border border-transparent rounded-lg hover:bg-primary-700 transition-colors duration-200"
               >
-                Kontaktiere uns
+                Leistungen anfordern
               </Link>
             </div>
             <div className="relative">
@@ -257,12 +255,7 @@ export default function TransformationServices() {
               <p className="text-gray-700 mb-6">
                 Individuelle Begleitung für Führungskräfte und Nachwuchstalente bei beruflichen Herausforderungen.
               </p>
-              <Link
-                href="/transformationskontinuum/kontakt"
-                className="text-primary-600 font-semibold hover:text-primary-700 transition-colors duration-200"
-              >
-                Mehr erfahren →
-              </Link>
+         
             </div>
 
             {/* Assessment Center */}
@@ -275,12 +268,7 @@ export default function TransformationServices() {
               <p className="text-gray-700 mb-6">
                 Wissenschaftlich fundierte Assessment Center für optimale Personalauswahl und -entwicklung.
               </p>
-              <Link
-                href="/transformationskontinuum/kontakt"
-                className="text-primary-600 font-semibold hover:text-primary-700 transition-colors duration-200"
-              >
-                Mehr erfahren →
-              </Link>
+              
             </div>
 
             {/* Outplacement */}
@@ -293,12 +281,7 @@ export default function TransformationServices() {
               <p className="text-gray-700 mb-6">
                 Professionelle Begleitung bei beruflichen Veränderungen - diskret und erfolgreich.
               </p>
-              <Link
-                href="/transformationskontinuum/kontakt"
-                className="text-primary-600 font-semibold hover:text-primary-700 transition-colors duration-200"
-              >
-                Mehr erfahren →
-              </Link>
+              
             </div>
           </div>
         </div>
