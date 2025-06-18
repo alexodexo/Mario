@@ -40,10 +40,12 @@ export default function Hero({
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Title */}
           {title && (
-            <h1 className="hero-text mb-6 animate-fade-in">
+            <h1 className="hero-text mb-6 animate-fade-in text-5xl sm:text-6xl lg:text-7xl font-bold drop-shadow bg-orange-600 text-white px-4 py-2 inline-block">
               {title}
             </h1>
           )}
+
+
           
           {/* Subtitle */}
           {subtitle && (

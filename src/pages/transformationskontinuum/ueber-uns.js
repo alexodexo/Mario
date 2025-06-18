@@ -1,34 +1,50 @@
 import Link from 'next/link'
-import { ArrowRight, Users, Target, TrendingUp, Clock, CheckCircle, Star, Phone, Mail, MapPin, User, Briefcase } from 'lucide-react'
+import { ArrowRight, Users, Target, TrendingUp, Clock, Shield, Heart, Eye, HeartHandshake, CheckCircle, Star, Phone, Mail, MapPin, User, Briefcase, Award } from 'lucide-react'
 import Hero from '../../components/common/Hero'
 import CTASection from '../../components/common/CTASection'
-import FAQSection from '../../components/common/FAQSection'
+
 
 export default function TransformationAbout() {
   const coreValues = [
     {
-      icon: Users,
-      title: 'Vertrauen',
-      description: 'Die Erinnerung an eine vertrauensvolle Zusammenarbeit ist primär an Menschen gekoppelt, die in ihren Beziehungen aufrichtig, in ihren Aussagen authentisch, in ihrer Arbeit kompetent und in ihren Versprechen realistisch sind.',
-      color: 'primary'
-    },
-    {
-      icon: Target,
+      icon: Award,
       title: 'Kompetenz',
-      description: 'Mit über 20 Jahren Beratungserfahrung und wissenschaftlich fundierten Methoden bringen wir bewährte Expertise in jedes Projekt ein.',
-      color: 'navy'
+      subtitle: 'Competence',
+      description: 'Mit über 20 Jahren Beratungserfahrung und wissenschaftlich fundierten Methoden bringen wir bewährte Expertise in jedes Projekt ein. Unser Team verfügt über tiefgreifende Fachkenntnisse in allen Bereichen der Transformation.',
+      color: 'primary',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
     },
     {
-      icon: Star,
-      title: 'Wertschätzung',
-      description: 'Wir sehen unsere Aufgabe darin, Menschen in ihrer Ganzheit und Einzigartigkeit wahrzunehmen, zu respektieren und zu fördern.',
-      color: 'primary'
+      icon: Shield,
+      title: 'Kontinuität',
+      subtitle: 'Constancy',
+      description: 'Beständigkeit und Verlässlichkeit prägen unsere Arbeitsweise. Wir stehen für langfristige Partnerschaften und begleiten Sie durchgehend auf Ihrem Transformationsweg.',
+      color: 'navy',
+      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
     },
     {
-      icon: TrendingUp,
-      title: 'Innovation',
-      description: 'Bewährte Methoden treffen auf innovative Ansätze. Unser virtueller Coach verbindet traditionelle Beratung mit modernster KI-Technologie.',
-      color: 'navy'
+      icon: Heart,
+      title: 'Fürsorge',
+      subtitle: 'Care',
+      description: 'Wir sehen unsere Aufgabe darin, Menschen in ihrer Ganzheit und Einzigartigkeit wahrzunehmen, zu respektieren und zu fördern. Echte Fürsorge für unsere Kunden und deren Erfolg steht im Mittelpunkt.',
+      color: 'primary',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+      icon: Eye,
+      title: 'Offenheit',
+      subtitle: 'Candor',
+      description: 'Offene, ehrliche Kommunikation und transparente Prozesse sind unser Markenzeichen. Wir sprechen Klartext und schaffen Transparenz in allen Projektphasen.',
+      color: 'navy',
+      image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+      icon: HeartHandshake,
+      title: 'Glaubwürdigkeit',
+      subtitle: 'Congruity',
+      description: 'Übereinstimmung zwischen Worten und Taten, zwischen Versprechen und Erfüllung. Unsere langjährige Erfolgsbilanz spricht für sich und macht uns zu einem verlässlichen Partner.',
+      color: 'primary',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
     }
   ]
 
@@ -69,12 +85,12 @@ export default function TransformationAbout() {
 
   const milestones = [
     {
-      year: '2002',
+      year: '2007',
       title: 'Gründung von C5 Business Partner',
       description: 'Mario Egartner gründet C5 Business Partner mit der Vision, Menschen und Organisationen bei nachhaltigen Transformationsprozessen zu begleiten.'
     },
     {
-      year: '2005',
+      year: '2013',
       title: 'Partnership mit Human Synergistics',
       description: 'Strategische Partnerschaft für wissenschaftlich fundierte Kulturanalysen und Organisationsentwicklung.'
     },
@@ -107,26 +123,7 @@ export default function TransformationAbout() {
     { number: '7.000+', label: 'Beratungsgespräche', icon: Users }
   ]
 
-  const clientTestimonials = [
-    {
-      text: "Von allen Beratern, die ich kennenlernen durfte, war das die angenehmste und offenste Zusammenarbeit. Sie war auch erfolgreich.",
-      author: "CEO, Dienstleistungsunternehmen",
-      company: "300 Mitarbeiter",
-      rating: 5
-    },
-    {
-      text: "Die Zusammenarbeit mit diesem Unternehmen hat mich absolut überzeugt. Ich würde mich jederzeit wieder dafür entscheiden und kann es nur weiterempfehlen.",
-      author: "Geschäftsbereichsleiter, Maschinenbau", 
-      company: "5 Mrd. Gesamtumsatz",
-      rating: 5
-    },
-    {
-      text: "C5 Business Partner hat uns bei der Kulturanalyse und Transformation hervorragend begleitet. Die Ergebnisse sprechen für sich - unsere Mitarbeiterzufriedenheit ist um 40% gestiegen.",
-      author: "Vorstand Personal",
-      company: "Internationaler Konzern",
-      rating: 5
-    }
-  ]
+
 
   const philosophy = {
     title: "Unser Geheimnis? Wir lieben unsere Arbeit und sind ein Netzwerk aus warmer Hand.",
@@ -138,8 +135,8 @@ export default function TransformationAbout() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Über C5 Business Partner"
-        subtitle="Excellence in Transformation seit 2002"
+        title="C5 Business Partner"
+        subtitle="Excellence in Transformation seit 2007"
         description="Wir sind ein bewährtes Netzwerk von Experten, die Organisationen, Teams und Menschen bei nachhaltigen Transformationsprozessen begleiten."
         primaryCTA={{
           text: 'Unser Team kennenlernen',
@@ -167,13 +164,13 @@ export default function TransformationAbout() {
                 {philosophy.description}
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal. 
-                Dabei setzen alle unsere Berater auf ihre individuellen Schwerpunkte, ohne die 
-                Zusammenarbeit im Team aus den Augen zu verlieren. Gegenseitige Unterstützung ist 
+                Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal.
+                Dabei setzen alle unsere Berater auf ihre individuellen Schwerpunkte, ohne die
+                Zusammenarbeit im Team aus den Augen zu verlieren. Gegenseitige Unterstützung ist
                 für uns selbstverständlich, sodass unsere Kunden vom geballten Team-Wissen profitieren.
               </p>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-primary-100 to-navy-100 rounded-xl overflow-hidden shadow-lg">
                 <div className="w-full h-full flex items-center justify-center">
@@ -185,31 +182,34 @@ export default function TransformationAbout() {
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-width">
-          <div className="text-center mb-16">
-            <h2 className="section-title">Unsere Kernwerte</h2>
-            <p className="section-subtitle">
-              Fünf entscheidende Werte liegen unserem C5-Business-Partner-Netzwerk und unserer täglichen Arbeit zugrunde
+      {/* Core Values - Die 5 Cs nach Warren Bennis - FÜNFTE SEKTION */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Die 5 Cs unserer Partnerschaft</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Fünf Vertrauenselemente nach Warren Bennis - weil echter Erfolg auf Vertrauen basiert
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {coreValues.map((value, index) => {
               const IconComponent = value.icon
+              if (!IconComponent) {
+                console.error('Icon component is undefined for value:', value.title)
+                return null
+              }
               return (
-                <div 
+                <div
                   key={index}
-                  className={`bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-up animation-delay-${index * 200}`}
+                  className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-all duration-200"
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${
-                    value.color === 'primary' ? 'bg-primary-100 text-primary-600' : 'bg-navy-100 text-navy-600'
-                  }`}>
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-blue-100 text-blue-600">
                     <IconComponent className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-navy-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{value.description}</p>
+                  <h3 className="text-lg font-bold text-blue-900 mb-2">{value.title}</h3>
+                  <p className="text-sm font-medium text-blue-600 mb-3">{value.subtitle}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
                 </div>
               )
             })}
@@ -224,7 +224,7 @@ export default function TransformationAbout() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Vertrauen durch Erfahrung</h2>
             <p className="text-xl text-gray-300">Unsere Erfolgsbilanz in Zahlen</p>
           </div>
-          
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon
@@ -258,7 +258,7 @@ export default function TransformationAbout() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {teamMembers.map((member, index) => (
-              <div 
+              <div
                 key={index}
                 className={`bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-up animation-delay-${index * 200}`}
               >
@@ -271,7 +271,7 @@ export default function TransformationAbout() {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-navy-900 mb-2">{member.name}</h3>
                     <p className="text-primary-600 font-semibold mb-4">{member.role}</p>
-                    
+
                     <div className="space-y-3 mb-6">
                       <div>
                         <h4 className="font-semibold text-navy-900 mb-1">Expertise:</h4>
@@ -282,7 +282,7 @@ export default function TransformationAbout() {
                         <p className="text-gray-700 text-sm">{member.experience}</p>
                       </div>
                     </div>
-                    
+
                     <p className="text-gray-600 text-sm leading-relaxed">{member.background}</p>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ export default function TransformationAbout() {
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-300" />
-              
+
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
                   <div key={index} className="relative flex items-start space-x-8">
@@ -328,147 +328,7 @@ export default function TransformationAbout() {
         </div>
       </section>
 
-      {/* Client Testimonials */}
-      <section className="section-padding bg-white">
-        <div className="container-width">
-          <div className="text-center mb-16">
-            <h2 className="section-title">Was Kunden über uns sagen</h2>
-            <p className="section-subtitle">
-              Authentische Erfahrungen aus über 20 Jahren erfolgreicher Zusammenarbeit
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {clientTestimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className={`bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100 animate-slide-up animation-delay-${index * 200}`}
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-gray-700 italic mb-6 leading-relaxed">
-                  "{testimonial.text}"
-                </blockquote>
-                <div className="border-t border-gray-200 pt-4">
-                  <cite className="font-semibold text-navy-900 not-italic">
-                    {testimonial.author}
-                  </cite>
-                  <p className="text-sm text-gray-500">{testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Strategy and Planning */}
-      <section className="section-padding bg-primary-600 text-white">
-        <div className="container-width">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Strategie und Planung
-              </h2>
-              <p className="text-xl text-primary-100 mb-8 leading-relaxed">
-                Jeder Kunde ist einzigartig. Deshalb passen wir unser Angebot genau Ihren 
-                Anforderungen an. Egal, ob es sich um einen kleinen Strategieentwurf oder 
-                eine umfassende Planung handelt. Wir nehmen uns Zeit für Sie.
-              </p>
-              
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-primary-200" />
-                  <span className="text-primary-100">Individuelle Bedarfsanalyse</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-primary-200" />
-                  <span className="text-primary-100">Maßgeschneiderte Lösungskonzepte</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-primary-200" />
-                  <span className="text-primary-100">Langfristige Partnerschaft</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-primary-200" />
-                  <span className="text-primary-100">Messbare Erfolgskennzahlen</span>
-                </li>
-              </ul>
-              
-              <Link
-                href="/transformationskontinuum/kontakt"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-600 bg-white border border-transparent rounded-lg shadow-lg hover:bg-gray-50 transition-colors duration-200"
-              >
-                Strategiegespräch vereinbaren
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-            
-            <div className="relative">
-              <div className="aspect-square bg-white/10 rounded-full p-8 backdrop-blur-sm border border-white/20">
-                <div className="w-full h-full bg-white/10 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-32 w-32 text-white/80" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-width">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-              Lernen Sie uns persönlich kennen
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Besuchen Sie uns in unserem Beraterhaus in Frankfurt oder vereinbaren Sie 
-              ein unverbindliches Kennenlern-Gespräch.
-            </p>
-            
-            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="text-left">
-                  <h3 className="font-semibold text-navy-900 mb-4">Unser Standort:</h3>
-                  <div className="space-y-2 text-gray-700">
-                    <p><strong>C5 Business Partner</strong></p>
-                    <p>Beraterhaus im Hinterhaus</p>
-                    <p>Günthersburgallee 82</p>
-                    <p>60389 Frankfurt am Main</p>
-                    <p>Deutschland</p>
-                  </div>
-                </div>
-                
-                <div className="text-left">
-                  <h3 className="font-semibold text-navy-900 mb-4">Kontakt:</h3>
-                  <div className="space-y-2 text-gray-700">
-                    <p><strong>Telefon:</strong> 069 - 9753 4441</p>
-                    <p><strong>E-Mail:</strong> info@c5-business-partner.de</p>
-                    <p className="mt-4 text-sm">
-                      <strong>Öffnungszeiten:</strong><br />
-                      Mo - Fr: 9:00 - 18:00<br />
-                      Sa - So: Geschlossen
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <Link
-              href="/transformationskontinuum/kontakt" 
-              className="btn-primary text-lg px-8 py-4"
-            >
-              Kontakt aufnehmen
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <FAQSection variant="transformation" />
 
       {/* CTA Section */}
       <CTASection variant="transformation" />
