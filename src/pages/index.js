@@ -208,7 +208,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
-                    Führungskräfte-Coaching (B2B)
+                    Führungskräfte-Begleitung 
                   </li>
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
@@ -241,8 +241,7 @@ export default function HomePage() {
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Coachingbegleitung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Individuum</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
-                  Persönliche Begleitung mit innovativer KI-Unterstützung. Vertrauensvolle
-                  Mensch-zu-Mensch UND Mensch-zu-Maschine Kommunikation.
+                  Ihre Mitarbeiter unterstüzen Ihr Potenzialen zu entfalten, in Krisen zu begleiten und Veränderungen anzunehmen.
                 </p>
               </div>
 
@@ -250,15 +249,15 @@ export default function HomePage() {
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
-                    Business & Karriere Coaching (B2C)
+                    Business & Karriere Coaching 
                   </li>
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
-                    KI-basierter Chatbot & Voicebot
+                    Nutzung von Potenzialanalysen
                   </li>
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
-                    Systemische Beratung & EAP
+                    Systemische Beratung
                   </li>
                 </ul>
               </div>
@@ -267,7 +266,7 @@ export default function HomePage() {
                 href="/transformationskontinuum/leistungen#coaching"
                 className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-white text-gray-900 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
               >
-                Frankfurt Business Coach
+                Coachinglösung
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
             </div>
@@ -381,7 +380,7 @@ export default function HomePage() {
           {/* Contact Section */}
           <div className="border-t border-white/20 pt-16">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              <h2 className="text-5xl font-bold mb-6 drop-shadow bg-orange-600 text-white px-4 py-2 inline-block">
                 Lassen Sie uns sprechen
               </h2>
               <p className="text-xl text-blue-100 mb-12 leading-relaxed">

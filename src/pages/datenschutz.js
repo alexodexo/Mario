@@ -64,7 +64,7 @@ export default function Datenschutz() {
                     <p>60389 Frankfurt am Main</p>
                     <p>Deutschland</p>
                     <p className="mt-4">
-                      <strong>E-Mail:</strong> <a href="mailto:egartner@c5-business-partner.de" className="text-primary-600 hover:text-primary-700">egartner@c5-business-partner.de</a>
+                      <strong>E-Mail:</strong> <a href="mailto:datenschutz@c5-business-partner.de" className="text-primary-600 hover:text-primary-700">datenschutz@c5-business-partner.de</a>
                     </p>
                     <p>
                       <strong>Telefon:</strong> <a href="tel:069-97534440" className="text-primary-600 hover:text-primary-700">069 - 9753 4440</a>
@@ -368,7 +368,7 @@ export default function Datenschutz() {
                   </p>
                   <div className="bg-white border border-gray-200 rounded-lg p-4">
                     <p className="text-sm">
-                      <strong>E-Mail:</strong> <a href="mailto:egartner@c5-business-partner.de" className="text-primary-600 hover:text-primary-700">egartner@c5-business-partner.de</a><br />
+                      <strong>E-Mail:</strong> <a href="mailto:datenschutz@c5-business-partner.de" className="text-primary-600 hover:text-primary-700">datenschutz@c5-business-partner.de</a><br />
                       <strong>Telefon:</strong> <a href="tel:069-97534440" className="text-primary-600 hover:text-primary-700">069 - 9753 4440</a><br />
                       <strong>Betreff:</strong> Datenschutz - [Ihr Anliegen]
                     </p>
