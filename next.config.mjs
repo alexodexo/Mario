@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['le-cdn.website-editor.net', 'images.unsplash.com', 'via.placeholder.com'],
+    domains: ['le-cdn.website-editor.net', 'images.unsplash.com', 'via.placeholder.com', 'margonline.com'],
     unoptimized: false,
   },
   // Cross-origin fix for development

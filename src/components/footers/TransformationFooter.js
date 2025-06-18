@@ -36,8 +36,8 @@ export default function TransformationFooter() {
       isContact: true,
       content: {
         address: 'Günthersburgallee 82\nBeraterhaus / Hinterhaus\n60389 Frankfurt am Main',
-        phone: '069 - 9753 4441',
-        email: 'info@c5-business-partner.de'
+        phone: '069 - 9753 4440',
+        email: 'berater@c5-business-partner.de'
       }
     }
   ]
@@ -102,30 +102,7 @@ export default function TransformationFooter() {
               <div className="text-2xl font-bold text-white mr-8">
                 C5 <span className="text-primary-400">Business Partner</span>
               </div>
-              <div className="flex space-x-4">
-                <a
-                  href="https://www.linkedin.com/in/mario-egartner"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label="LinkedIn Profil von Mario Egartner"
-                >
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.xing.com/profile/Mario_Egartner"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label="Xing Profil von Mario Egartner"
-                >
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536L14.421 13.7c-.193-.26-.193-.432 0-.66L19.825.874c.193-.9.193-.346.105-.534C19.852.078 19.688 0 19.477 0h-1.289zm-7.754 13.428c-.207 0-.37.093-.463.25-.09.151-.090.346.009.534l1.232 2.262c.193.26.193.432 0 .66l-2.395 4.364c-.193.26-.193.432 0 .66C8.912 19.93 9.075 20 9.286 20h3.454c.207 0 .37-.093.463-.25.090-.151.090-.346-.009-.534l-2.874-5.199c-.193-.26-.193-.432 0-.66l3.663-6.684c.207-.370.207-.61 0-.98L11.111.874c-.193-.26-.436-.660-.967-.66H6.69c-.211 0-.375.093-.463.25-.089.151-.089.346.009.534l2.463 4.516c.193.26.193.432 0 .66z"/>
-                  </svg>
-                </a>
-              </div>
+     
             </div>
             
             {/* Quick CTA */}
@@ -147,7 +124,7 @@ export default function TransformationFooter() {
         <div className="border-t border-navy-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <div className="mb-4 md:mb-0">
-              <p>&copy; 2024 C5 Business Partner. Alle Rechte vorbehalten.</p>
+              <p>&copy; 2025 C5 Business Partner. Alle Rechte vorbehalten.</p>
             </div>
             <div className="flex space-x-6">
               <Link

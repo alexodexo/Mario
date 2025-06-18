@@ -10,7 +10,7 @@ export default function TransformationServices() {
       {/* Hero Section */}
       <Hero
         title="Unsere Dienstleistungen"
-        description="Erfahren Sie mehr über unsere Dienstleistungen, die das Transformationskontinuum von C5 und fbc ausmachen."
+        description="Erfahren Sie mehr über unsere Dienstleistungen, die das Transformationskontinuum von C5 ausmachen."
         primaryCTA={{
           text: 'Kontaktiere uns',
           href: '/transformationskontinuum/kontakt'
@@ -29,7 +29,7 @@ export default function TransformationServices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-                Beratung zur Unternehmenskultur
+                Organisation beraten
               </h2>
               <p className="text-gray-700 mb-6">
                 Unsere Unternehmenskulturberatung bietet maßgeschneiderte Lösungen zur Optimierung der Unternehmenskultur und -performance.
@@ -97,7 +97,7 @@ export default function TransformationServices() {
             </div>
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-                TEAMS ausrichten
+                Teams ausrichten
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 Strategische Entwicklung effektiver Teamstrukturen und -dynamiken
@@ -201,14 +201,12 @@ export default function TransformationServices() {
             </div>
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-                Partnerschaft mit Human Synergistics
-              </h2>
+                Wissenschaftlich belegt              </h2>
               <p className="text-gray-700 mb-6">
-                Durch die Anwendung von Human Synergistics' bewährten Instrumenten unterstützen wir Unternehmen bei der Entwicklung einer gesunden und effektiven Organisationskultur.
+                Die enge Kooperation zwischen C5 Business Partner und Human Synergistics verbindet wissenschaftlich fundierte Diagnostik mit innovativen Coaching.
               </p>
               <p className="text-gray-700 mb-8">
-                Wir arbeiten eng mit unseren Kunden zusammen, um maßgeschneiderte Lösungen zu entwickeln, die ihren individuellen Anforderungen entsprechen.
-              </p>
+                Damit erzielen wir eine wirksamen Entwicklungspfad von Leadership und kulturellem Wandel.               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
@@ -216,7 +214,7 @@ export default function TransformationServices() {
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Entwicklung gesunder Organisationskulturen</span>
+                  <span className="text-gray-700">Zielsetzung einer kooperativ und konstruktiven Unternehmsnkultur </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
@@ -224,10 +222,10 @@ export default function TransformationServices() {
                 </li>
               </ul>
               <Link
-                href="/transformationskontinuum/kontakt"
+                href="/transformationskontinuum/HumanSynergistics"
                 className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-primary-600 border border-transparent rounded-lg hover:bg-primary-700 transition-colors duration-200"
               >
-                Kontaktiere uns
+                Mehr erfahren
               </Link>
             </div>
           </div>
@@ -242,16 +240,16 @@ export default function TransformationServices() {
         <div className="container-width">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
-              Weitere Dienstleistungen
-            </h2>
+              Sonderthemen            </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Entdecken Sie unser vollständiges Dienstleistungsangebot für nachhaltigen Erfolg
-            </p>
+              Folgende Thmen runden unser Leistungsportfolio ab             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
             {/* Executive Coaching */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-200">
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-200
+                flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
                 <User className="h-8 w-8 text-primary-600" />
               </div>
@@ -268,7 +266,8 @@ export default function TransformationServices() {
             </div>
 
             {/* Assessment Center */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-200">
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-200
+                flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
                 <BarChart3 className="h-8 w-8 text-primary-600" />
               </div>
@@ -285,7 +284,8 @@ export default function TransformationServices() {
             </div>
 
             {/* Outplacement */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-200">
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-200
+                flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
                 <ArrowRight className="h-8 w-8 text-primary-600" />
               </div>
