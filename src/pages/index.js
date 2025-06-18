@@ -67,23 +67,23 @@ export default function HomePage() {
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900"></div>
           {/* Try video first, fallback to gradient */}
-          <video 
-            autoPlay 
-            loop 
-            muted 
+          <video
+            autoPlay
+            loop
+            muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
             onError={(e) => e.target.style.display = 'none'}
           >
-            <source 
-              src="https://fastly-signed-us-east-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/1971571337001/b5cd680e-938d-4b44-9083-d3e5d7eb3ca5/117d8dd0-356e-4035-83a0-99fa3e4987c1/main.mp4?fastly_token=Njg0MGRmMzJfYmFjNjY0ZmJjN2RlYzVkOGMxYWQ0NzdhOWEyYjM5MGEwM2QzMzAwNjViMjI1YTE0ZmQxOTUxOWQxNzg4MTQ1Nl8vL2Zhc3RseS1zaWduZWQtdXMtZWFzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMTk3MTU3MTMzNzAwMS9iNWNkNjgwZS05MzhkLTRiNDQtOTA4My1kM2U1ZDdlYjNjYTUvMTE3ZDhkZDAtMzU2ZS00MDM1LTgzYTAtOTlmYTNlNDk4N2MxL21haW4ubXA0" 
-              type="video/mp4" 
+            <source
+              src="https://bwed8tnhqzhe5qrs.public.blob.vercel-storage.com/WhatsApp%20Video%202025-06-07%20at%2021.33.55-rUiRQfeCeeyKwkkV3kzLjp97v2NscT.mp4"
+              type="video/mp4"
             />
           </video>
           {/* Dark Overlay for better text readability */}
           <div className="absolute inset-0 bg-black/50" />
         </div>
-        
+
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
@@ -94,7 +94,7 @@ export default function HomePage() {
                 Von der Kultur über das Team zum Individuum
               </p>
               <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
-                Excellence in Transformation - Ganzheitliche Begleitung für nachhaltige Veränderungen 
+                Excellence in Transformation - Ganzheitliche Begleitung für nachhaltige Veränderungen
                 auf drei Ebenen der Organisation.
               </p>
             </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
                 C5 Business Partner
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
-              
+
               <Link
                 href="/frankfurt-business-coach"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white rounded-lg hover:bg-white hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
@@ -123,37 +123,35 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* Transformationskontinuum Overview - JETZT ZWEITE SEKTION */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Das Transformationskontinuum</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ganzheitliche Begleitung auf drei Ebenen - von der Organisationskultur bis zur individuellen Entwicklung
-            </p>
+            <h2 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-4">Von der Kulturbererhebung bis zur systemische Implementierung </h2>
           </div>
 
           {/* Three Levels of Transformation */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            
+
             {/* Level 1: Kulturberatung */}
             <div className="bg-gradient-to-br from-blue-600 to-blue-400  rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="aspect-video mb-4 lg:mb-6 rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                   alt="Frankfurter Hochhäuser - Außenperspektive auf Unternehmen"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               <div className="mb-4 lg:mb-6">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mb-4">
                   <Target className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold mb-2">Kulturberatung</h3>
-                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4">Organisation</p>
+                <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Kulturberatung</h3>
+                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Organisation</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
-                  Der Blick von außen auf Ihre Organisation. Wir analysieren Ihre Unternehmenskultur 
+                  Der Blick von außen auf Ihre Organisation. Wir analysieren Ihre Unternehmenskultur
                   objektiv und entwickeln strategische Transformationspläne.
                 </p>
               </div>
@@ -187,21 +185,21 @@ export default function HomePage() {
             {/* Level 2: Teamberatung */}
             <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="aspect-video mb-4 lg:mb-6 rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                   alt="Fröhliches Team bei der Zusammenarbeit am Laptop"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               <div className="mb-4 lg:mb-6">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mb-4">
                   <Users className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold mb-2">Changeberatung</h3>
-                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4">Team & Führungskräfte</p>
+                <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Transformationsberatung</h3>
+                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Team & Führungskräfte</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
-                  Teams unterstützen, symbiosieren und weiterentwickeln. Wir schaffen nachhaltige 
+                  Teams unterstützen, symbiosieren und weiterentwickeln. Wir schaffen nachhaltige
                   Verbesserungen in der Zusammenarbeit und Teamdynamik.
                 </p>
               </div>
@@ -235,21 +233,21 @@ export default function HomePage() {
             {/* Level 3: Individualberatung */}
             <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 md:col-span-2 lg:col-span-1">
               <div className="aspect-video mb-4 lg:mb-6 rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                   alt="Coaching-Gespräch zwischen zwei Menschen mit KI-Elementen"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               <div className="mb-4 lg:mb-6">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mb-4">
                   <User className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold mb-2">Individualberatung</h3>
-                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4">Individuum</p>
+                <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Coachingbegleitung</h3>
+                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Individuum</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
-                  Persönliche Begleitung mit innovativer KI-Unterstützung. Vertrauensvolle 
+                  Persönliche Begleitung mit innovativer KI-Unterstützung. Vertrauensvolle
                   Mensch-zu-Mensch UND Mensch-zu-Maschine Kommunikation.
                 </p>
               </div>
@@ -298,16 +296,16 @@ export default function HomePage() {
                 {philosophy.description}
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal. 
-                Dabei setzen alle unsere Berater auf ihre individuellen Schwerpunkte, ohne die 
-                Zusammenarbeit im Team aus den Augen zu verlieren. Gegenseitige Unterstützung ist 
+                Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal.
+                Dabei setzen alle unsere Berater auf ihre individuellen Schwerpunkte, ohne die
+                Zusammenarbeit im Team aus den Augen zu verlieren. Gegenseitige Unterstützung ist
                 für uns selbstverständlich, sodass unsere Kunden vom geballten Team-Wissen profitieren.
               </p>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-100 rounded-xl overflow-hidden shadow-lg">
-                <img 
+                <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                   alt="Team bei der Zusammenarbeit"
                   className="w-full h-full object-cover"
@@ -325,7 +323,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-orange-400">Vertrauen durch Erfahrung</h2>
             <p className="text-xl text-gray-300">Unsere Erfolgsbilanz in Zahlen</p>
           </div>
-          
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon
@@ -365,7 +363,7 @@ export default function HomePage() {
                 return null
               }
               return (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-all duration-200"
                 >
@@ -391,11 +389,11 @@ export default function HomePage() {
                 Strategie und Planung
               </h2>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Jeder Kunde ist einzigartig. Deshalb passen wir unser Angebot genau Ihren 
-                Anforderungen an. Egal, ob es sich um einen kleinen Strategieentwurf oder 
+                Jeder Kunde ist einzigartig. Deshalb passen wir unser Angebot genau Ihren
+                Anforderungen an. Egal, ob es sich um einen kleinen Strategieentwurf oder
                 eine umfassende Planung handelt. Wir nehmen uns Zeit für Sie.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <Star className="h-6 w-6 text-blue-200 flex-shrink-0" />
@@ -415,7 +413,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-square bg-white/10 rounded-full p-8 backdrop-blur-sm border border-white/20">
                 <div className="w-full h-full bg-white/10 rounded-full flex items-center justify-center">
@@ -432,14 +430,14 @@ export default function HomePage() {
                 Lassen Sie uns sprechen
               </h2>
               <p className="text-xl text-blue-100 mb-12 leading-relaxed">
-                Transformation beginnt mit einem Gespräch. Kontaktieren Sie uns für eine 
+                Transformation beginnt mit einem Gespräch. Kontaktieren Sie uns für eine
                 unverbindliche Beratung und entdecken Sie die Möglichkeiten für Ihr Unternehmen.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-lg">
                   <Phone className="h-8 w-8 text-blue-200" />
-                  <a 
+                  <a
                     href="tel:069-97534440"
                     className="hover:text-blue-200 transition-colors duration-200 font-semibold"
                   >
@@ -448,7 +446,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-lg">
                   <Mail className="h-8 w-8 text-blue-200" />
-                  <a 
+                  <a
                     href="mailto:berater@c5-business-partner.de"
                     className="hover:text-blue-200 transition-colors duration-200 font-semibold"
                   >
