@@ -30,7 +30,7 @@ export default function HomePage() {
     },
     {
       icon: Eye,
-      title: 'Klarheit',
+      title: 'Offenheit',
       subtitle: 'Candor',
       description: 'Offene, ehrliche Kommunikation und transparente Prozesse sind unser Markenzeichen. Wir sprechen Klartext und schaffen Transparenz in allen Projektphasen.',
       color: 'navy',
@@ -145,9 +145,7 @@ export default function HomePage() {
               </div>
 
               <div className="mb-4 lg:mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mb-4">
-                  <Target className="h-6 w-6 text-white" />
-                </div>
+                
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Kulturberatung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Organisation</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
@@ -193,9 +191,7 @@ export default function HomePage() {
               </div>
 
               <div className="mb-4 lg:mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mb-4">
-                  <Users className="h-6 w-6 text-white" />
-                </div>
+                
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Transformationsberatung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Team & Führungskräfte</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
@@ -241,9 +237,7 @@ export default function HomePage() {
               </div>
 
               <div className="mb-4 lg:mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mb-4">
-                  <User className="h-6 w-6 text-white" />
-                </div>
+                
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Coachingbegleitung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Individuum</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
@@ -383,46 +377,7 @@ export default function HomePage() {
       {/* Strategy, Planning & Contact - Combined Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-            <div>
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                Strategie und Planung
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Jeder Kunde ist einzigartig. Deshalb passen wir unser Angebot genau Ihren
-                Anforderungen an. Egal, ob es sich um einen kleinen Strategieentwurf oder
-                eine umfassende Planung handelt. Wir nehmen uns Zeit für Sie.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-blue-200 flex-shrink-0" />
-                  <span className="text-blue-100">Individuelle Bedarfsanalyse</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-blue-200 flex-shrink-0" />
-                  <span className="text-blue-100">Maßgeschneiderte Lösungskonzepte</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-blue-200 flex-shrink-0" />
-                  <span className="text-blue-100">Langfristige Partnerschaft</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Star className="h-6 w-6 text-blue-200 flex-shrink-0" />
-                  <span className="text-blue-100">Messbare Erfolgskennzahlen</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square bg-white/10 rounded-full p-8 backdrop-blur-sm border border-white/20">
-                <div className="w-full h-full bg-white/10 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-32 w-32 text-white/80" />
-                </div>
-              </div>
-            </div>
-          </div>
-
+            
           {/* Contact Section */}
           <div className="border-t border-white/20 pt-16">
             <div className="text-center max-w-4xl mx-auto">

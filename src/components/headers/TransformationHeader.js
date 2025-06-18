@@ -8,17 +8,17 @@ export default function TransformationHeader() {
   const router = useRouter()
 
   const navigation = [
-    { 
-      name: 'Über uns', 
-      href: '/transformationskontinuum/ueber-uns' 
+    {
+      name: 'Über uns',
+      href: '/transformationskontinuum/ueber-uns'
     },
-    { 
-      name: 'Leistungen', 
-      href: '/transformationskontinuum/leistungen' 
+    {
+      name: 'Leistungen',
+      href: '/transformationskontinuum/leistungen'
     },
-    { 
-      name: 'Kontakt', 
-      href: '/transformationskontinuum/kontakt' 
+    {
+      name: 'Kontakt',
+      href: '/transformationskontinuum/kontakt'
     }
   ]
 
@@ -57,9 +57,15 @@ export default function TransformationHeader() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="text-xl lg:text-2xl font-bold text-navy-900">
-                C5 <span className="text-primary-600">Business Partner</span>
+              <div className="flex items-center text-xl lg:text-2xl font-bold text-navy-900 space-x-2">
+                <img
+                  src="/c5-short-logo.webp"
+                  alt="C5 Logo"
+                  className="h-[1em] w-auto"
+                />
+                <span className="text-primary-600">Business Partner</span>
               </div>
+
             </Link>
           </div>
 
@@ -69,16 +75,15 @@ export default function TransformationHeader() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                  isActiveLink(item.href)
-                    ? 'text-primary-600 border-b-2 border-primary-600'
-                    : 'text-gray-700 hover:text-primary-600'
-                }`}
+                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${isActiveLink(item.href)
+                  ? 'text-primary-600 border-b-2 border-primary-600'
+                  : 'text-gray-700 hover:text-primary-600'
+                  }`}
               >
                 {item.name}
               </Link>
             ))}
-            
+
             {/* CTA Button */}
             <Link
               href="/transformationskontinuum/kontakt"
@@ -106,9 +111,8 @@ export default function TransformationHeader() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-        }`}>
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+          }`}>
           <div className="px-2 pt-2 pb-6 space-y-1 bg-white border-t border-gray-200">
             {/* Mobile Contact Info */}
             <div className="px-3 py-4 border-b border-gray-200 md:hidden">
@@ -123,22 +127,21 @@ export default function TransformationHeader() {
                 </div>
               </div>
             </div>
-            
+
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
-                  isActiveLink(item.href)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
-                }`}
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${isActiveLink(item.href)
+                  ? 'text-primary-600 bg-primary-50'
+                  : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            
+
             {/* Mobile CTA Button */}
             <div className="pt-4">
               <Link
