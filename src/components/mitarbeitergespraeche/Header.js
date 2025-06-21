@@ -27,7 +27,7 @@ export default function Header({ onShowTutorial }) {
       </div>
       
       <div className="absolute bottom-4 right-6 text-sm text-c5-text-light italic">
-        Entwickelt von C5 Mario Egartner
+        Entwickelt von C5 Mario Egartner und Claude
       </div>
     </div>
   )
