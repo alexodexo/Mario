@@ -87,9 +87,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold rounded-xl mb-6 drop-shadow bg-orange-600 text-white px-4 py-2 inline-block">
-      Transformationskontinuum
-    </h1>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 drop-shadow bg-orange-600 text-white px-4 py-2 inline-block">
+                Transformationskontinuum
+              </h1>
               <p className="text-2xl sm:text-3xl text-blue-200 font-semibold mb-8 drop-shadow-md">
                 Von der Kultur über das Team zum Individuum
               </p>
@@ -98,8 +98,6 @@ export default function HomePage() {
                 auf drei Ebenen der Organisation.
               </p>
             </div>
-
-            
           </div>
         </div>
       </section>
@@ -126,7 +124,7 @@ export default function HomePage() {
               </div>
 
               <div className="mb-4 lg:mb-6">
-                
+
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Kulturberatung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Organisation</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
@@ -172,7 +170,7 @@ export default function HomePage() {
               </div>
 
               <div className="mb-4 lg:mb-6">
-                
+
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Transformationsberatung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Team & Führungskräfte</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
@@ -189,7 +187,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
-                    Führungskräfte-Begleitung 
+                    Führungskräfte-Begleitung
                   </li>
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
@@ -218,7 +216,7 @@ export default function HomePage() {
               </div>
 
               <div className="mb-4 lg:mb-6">
-                
+
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Coachingbegleitung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Individuum</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
@@ -230,7 +228,7 @@ export default function HomePage() {
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
-                    Business & Karriere Coaching 
+                    Business & Karriere Coaching
                   </li>
                   <li className="flex items-center text-sm text-white/90">
                     <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
@@ -356,56 +354,56 @@ export default function HomePage() {
 
       {/* Strategy, Planning & Contact - Combined Section */}
       <section className="py-5 bg-blue-600 text-white">
-            
-          {/* Contact Section */}
-          <div className=" border-white/20 pt-16">
-            <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-5xl font-bold mb-6 drop-shadow rounded-xl bg-orange-600 text-white px-4 py-2 inline-block">
-                Lassen Sie uns sprechen
-              </h2>
-              <p className="text-xl text-blue-100 mb-12 leading-relaxed">
-                Transformation beginnt mit einem Gespräch. Kontaktieren Sie uns für eine
-                unverbindliche Beratung und entdecken Sie die Möglichkeiten für Ihr Unternehmen.
-              </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-lg">
-                  <Phone className="h-8 w-8 text-blue-200" />
-                  <a
-                    href="tel:069-97534440"
-                    className="hover:text-blue-200 transition-colors duration-200 font-semibold"
-                  >
-                    069 - 9753 4440
-                  </a>
-                </div>
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-lg">
-                  <Mail className="h-8 w-8 text-blue-200" />
-                  <a
-                    href="mailto:berater@c5-business-partner.de"
-                    className="hover:text-blue-200 transition-colors duration-200 font-semibold"
-                  >
-                    berater@c5-business-partner.de
-                  </a>
-                </div>
+        {/* Contact Section */}
+        <div className=" border-white/20 pt-16">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-5xl font-bold mb-6 drop-shadow  bg-orange-600 text-white px-4 py-2 inline-block">
+              Lassen Sie uns sprechen
+            </h2>
+            <p className="text-xl text-blue-100 mb-12 leading-relaxed">
+              Transformation beginnt mit einem Gespräch. Kontaktieren Sie uns für eine
+              unverbindliche Beratung und entdecken Sie die Möglichkeiten für Ihr Unternehmen.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-lg">
+                <Phone className="h-8 w-8 text-blue-200" />
+                <a
+                  href="tel:069-97534440"
+                  className="hover:text-blue-200 transition-colors duration-200 font-semibold"
+                >
+                  069 - 9753 4440
+                </a>
               </div>
-
-              <div className="text-center">
-                <p className="text-blue-100 mb-8 text-lg">
-                  <MapPin className="inline-block h-6 w-6 mr-2" />
-                  <strong>Standort:</strong> Günthersburgallee 82, 60389 Frankfurt am Main
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/transformationskontinuum/kontakt"
-                    className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-blue-600 bg-white border border-transparent rounded-lg shadow-lg hover:bg-blue-50 transition-colors duration-200"
-                  >
-                    Strategiegespräch vereinbaren
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                  
-                </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 text-lg">
+                <Mail className="h-8 w-8 text-blue-200" />
+                <a
+                  href="mailto:berater@c5-business-partner.de"
+                  className="hover:text-blue-200 transition-colors duration-200 font-semibold"
+                >
+                  berater@c5-business-partner.de
+                </a>
               </div>
             </div>
+
+            <div className="text-center">
+              <p className="text-blue-100 mb-8 text-lg">
+                <MapPin className="inline-block h-6 w-6 mr-2" />
+                <strong>Standort:</strong> Günthersburgallee 82, 60389 Frankfurt am Main
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/transformationskontinuum/kontakt"
+                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-blue-600 bg-white border border-transparent rounded-lg shadow-lg hover:bg-blue-50 transition-colors duration-200"
+                >
+                  Strategiegespräch vereinbaren
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

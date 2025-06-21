@@ -16,7 +16,7 @@ export default function CTASection({
 
   const content = {
     transformation: {
-      title: 'Transformation beginnt mit einem Gespräch',
+      title: 'Ihre Transformation beginnt jetzt',
       subtitle: 'Lassen Sie uns gemeinsam Ihre Herausforderungen analysieren und nachhaltige Lösungen entwickeln.',
       primaryCTA: {
         text: 'Beratung anfragen',
@@ -59,7 +59,7 @@ export default function CTASection({
       
       <div className="container-width section-padding relative">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6  text-white">
             {currentContent.title}
           </h2>
           <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">

@@ -11,14 +11,8 @@ export default function TransformationServices() {
       <Hero
         title="Unsere Leistungen"
         description="Erfahren Sie mehr über unsere Dienstleistungen, die das Transformationskontinuum von C5 ausmachen."
-        primaryCTA={{
-          text: 'Kontaktiere uns',
-          href: '/transformationskontinuum/kontakt'
-        }}
-        secondaryCTA={{
-          text: 'Mehr über uns',
-          href: '/transformationskontinuum/ueber-uns'
-        }}
+        
+        
       />
 
 
