@@ -12,6 +12,7 @@ export default function TransformationContact() {
   })
   const [formStatus, setFormStatus] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formErrors, setFormErrors] = useState({})
 
   const serviceOptions = [
     'Kulturanalyse mit Human Synergistics',
@@ -25,24 +26,52 @@ export default function TransformationContact() {
     'Sonstiges'
   ]
 
+  const validate = () => {
+    const errors = {}
+    if (!formData.name.trim()) errors.name = 'Bitte geben Sie Ihren Namen an.'
+    if (!formData.email.trim()) errors.email = 'Bitte geben Sie Ihre E-Mail an.'
+    else if (!/^[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(formData.email))
+      errors.email = 'Bitte geben Sie eine gültige E-Mail an.'
+    if (!formData.company.trim()) errors.company = 'Bitte geben Sie Ihr Unternehmen an.'
+    if (!formData.phone.trim()) errors.phone = 'Bitte geben Sie Ihre Telefonnummer an.'
+    if (!formData.service.trim()) errors.service = 'Bitte wählen Sie einen Interessensbereich.'
+    if (!formData.message.trim()) errors.message = 'Bitte geben Sie eine Nachricht ein.'
+    return errors
+  }
+
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))
+    setFormErrors(prev => ({
+      ...prev,
+      [name]: undefined
+    }))
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setIsSubmitting(true)
     setFormStatus('')
+    setIsSubmitting(true)
+
+    const errors = validate()
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors)
+      setIsSubmitting(false)
+      return
+    }
+    setFormErrors({})
 
     try {
-      // Here you would typically send the form data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (!res.ok) throw new Error()
       setFormStatus('success')
       setFormData({
         name: '',
@@ -60,8 +89,8 @@ export default function TransformationContact() {
   }
 
   const scrollToBooking = () => {
-    document.getElementById('booking-section').scrollIntoView({ 
-      behavior: 'smooth' 
+    document.getElementById('booking-section').scrollIntoView({
+      behavior: 'smooth'
     })
   }
 
@@ -86,17 +115,17 @@ export default function TransformationContact() {
       <section className="relative text-white overflow-hidden min-h-screen flex items-center">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <video 
-            autoPlay 
-            loop 
-            muted 
+          <video
+            autoPlay
+            loop
+            muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
             onError={(e) => e.target.style.display = 'none'}
           >
-            <source 
-              src="https://cdn.pixabay.com/vimeo/453433081/businessman%20-%2049060.mp4?width=1280&hash=f5ac65dad89d4d2eeb20c5e2c5b4f2e1f0ab79b8" 
-              type="video/mp4" 
+            <source
+              src="https://cdn.pixabay.com/vimeo/453433081/businessman%20-%2049060.mp4?width=1280&hash=f5ac65dad89d4d2eeb20c5e2c5b4f2e1f0ab79b8"
+              type="video/mp4"
             />
           </video>
           {/* Dark Overlay for better text readability */}
@@ -104,7 +133,7 @@ export default function TransformationContact() {
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/60 to-purple-900/80" />
         </div>
-        
+
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
@@ -128,7 +157,7 @@ export default function TransformationContact() {
                 <Phone className="mr-3 h-6 w-6" />
                 Direkt anrufen
               </a>
-              
+
               <a
                 href="mailto:berater@c5-business-partner.de"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white rounded-lg hover:bg-white hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
@@ -153,7 +182,6 @@ export default function TransformationContact() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold text-blue-900 mb-4">
@@ -163,7 +191,7 @@ export default function TransformationContact() {
                 Beschreiben Sie uns Ihr Anliegen. Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -176,11 +204,12 @@ export default function TransformationContact() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      className={`w-full px-3 py-2 border ${formErrors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
                       placeholder="Ihr Name"
                     />
+                    {formErrors.name && <span className="text-red-600 text-xs">{formErrors.name}</span>}
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       E-Mail *
@@ -192,54 +221,60 @@ export default function TransformationContact() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      className={`w-full px-3 py-2 border ${formErrors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
                       placeholder="ihre.email@unternehmen.de"
                     />
+                    {formErrors.email && <span className="text-red-600 text-xs">{formErrors.email}</span>}
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                      Unternehmen
+                      Unternehmen *
                     </label>
                     <input
                       type="text"
                       id="company"
                       name="company"
+                      required
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      className={`w-full px-3 py-2 border ${formErrors.company ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
                       placeholder="Ihr Unternehmen"
                     />
+                    {formErrors.company && <span className="text-red-600 text-xs">{formErrors.company}</span>}
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Telefon
+                      Telefon *
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
+                      required
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      className={`w-full px-3 py-2 border ${formErrors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
                       placeholder="069 - 123 456"
                     />
+                    {formErrors.phone && <span className="text-red-600 text-xs">{formErrors.phone}</span>}
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                    Interessensbereich
+                    Interessensbereich *
                   </label>
                   <select
                     id="service"
                     name="service"
+                    required
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                    className={`w-full px-3 py-2 border ${formErrors.service ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
                   >
                     <option value="">Bitte wählen Sie...</option>
                     {serviceOptions.map((option, index) => (
@@ -248,6 +283,7 @@ export default function TransformationContact() {
                       </option>
                     ))}
                   </select>
+                  {formErrors.service && <span className="text-red-600 text-xs">{formErrors.service}</span>}
                 </div>
 
                 <div>
@@ -261,9 +297,10 @@ export default function TransformationContact() {
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none"
+                    className={`w-full px-3 py-2 border ${formErrors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none`}
                     placeholder="Beschreiben Sie uns Ihre Herausforderungen und Ziele..."
                   />
+                  {formErrors.message && <span className="text-red-600 text-xs">{formErrors.message}</span>}
                 </div>
 
                 {/* Form Status Messages */}
@@ -306,7 +343,6 @@ export default function TransformationContact() {
               <h2 className="text-2xl font-bold text-blue-900 mb-4">
                 Kontaktinformationen
               </h2>
-              
               <div className="space-y-6">
                 {/* Address */}
                 <div className="flex items-start space-x-3">
@@ -340,7 +376,7 @@ export default function TransformationContact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-blue-900 mb-1">Telefon</h3>
-                    <a 
+                    <a
                       href={`tel:${contactInfo.phone.replace(/\s|-/g, '')}`}
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
                     >
@@ -356,7 +392,7 @@ export default function TransformationContact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-blue-900 mb-1">E-Mail</h3>
-                    <a 
+                    <a
                       href={`mailto:${contactInfo.email}`}
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
                     >
@@ -386,19 +422,18 @@ export default function TransformationContact() {
 
       {/* Cal.com Integration Section with Video Background */}
       <section id="booking-section" className="relative py-16 bg-blue-900 overflow-hidden">
-        {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <video 
-            autoPlay 
-            loop 
-            muted 
+          <video
+            autoPlay
+            loop
+            muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover opacity-30"
             onError={(e) => e.target.style.display = 'none'}
           >
-            <source 
-              src="https://cdn.pixabay.com/vimeo/453433081/businessman%20-%2049060.mp4?width=1280&hash=f5ac65dad89d4d2eeb20c5e2c5b4f2e1f0ab79b8" 
-              type="video/mp4" 
+            <source
+              src="https://cdn.pixabay.com/vimeo/453433081/businessman%20-%2049060.mp4?width=1280&hash=f5ac65dad89d4d2eeb20c5e2c5b4f2e1f0ab79b8"
+              type="video/mp4"
             />
           </video>
           {/* Dark Overlay */}
@@ -422,22 +457,17 @@ export default function TransformationContact() {
                   width="100%"
                   height="100%"
                   frameBorder="0"
-                  style={{ 
+                  style={{
                     border: 'none',
                     borderRadius: '8px'
                   }}
                   title="Terminbuchung Cal.com"
                 />
               </div>
-              
-              
             </div>
           </div>
         </div>
       </section>
-
-    
-
     </>
   )
 }
