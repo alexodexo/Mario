@@ -174,7 +174,7 @@ export default function HomePage() {
               <div className="mb-4 lg:mb-6">
 
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Transformationsberatung</h3>
-                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Team & Führungskräfte</p>
+                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Teams</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
                   Teams unterstützen, symbiosieren und weiterentwickeln. Wir schaffen 
                   Verbesserungen in der Zusammenarbeit und Teamdynamik.
@@ -220,7 +220,7 @@ export default function HomePage() {
               <div className="mb-4 lg:mb-6">
 
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Coachingbegleitung</h3>
-                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Individuum</p>
+                <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Führungskräfte</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
                   Ihre Mitarbeiter unterstüzen Ihr Potenzialen zu entfalten, in Krisen zu begleiten und Veränderungen anzunehmen.
                 </p>
@@ -255,37 +255,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Philosophy Section - JETZT DRITTE SEKTION */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#f56518] mb-6">
-                {philosophy.subtitle}
-              </h2>
-              <blockquote className="text-2xl font-light text-blue-600 italic mb-6 leading-relaxed">
-                "{philosophy.title}"
-              </blockquote>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                {philosophy.description}
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal.
-                Dabei setzen alle unsere Berater auf ihre individuellen Schwerpunkte, ohne die
-                Zusammenarbeit im Team aus den Augen zu verlieren. Gegenseitige Unterstützung ist
-                für uns selbstverständlich, sodass unsere Kunden vom geballten Team-Wissen profitieren.
-              </p>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-100 rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                  alt="Team bei der Zusammenarbeit"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              {philosophy.subtitle}
+            </h2>
+            <blockquote className="text-2xl font-light text-blue-600 italic mb-6 leading-relaxed">
+              "{philosophy.title}"
+            </blockquote>
+            <p className="text-gray-700 leading-relaxed mb-8 text-lg">
+              {philosophy.description}
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal.
+              Dabei setzen alle unsere Berater auf ihre individuellen Schwerpunkte, ohne die
+              Zusammenarbeit im Team aus den Augen zu verlieren. Gegenseitige Unterstützung ist
+              für uns selbstverständlich, sodass unsere Kunden vom geballten Team-Wissen profitieren.
+            </p>
           </div>
         </div>
       </section>
