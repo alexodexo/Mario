@@ -58,12 +58,8 @@ export default function TransformationHeader() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <div className="flex items-center text-xl lg:text-2xl font-bold text-navy-900 space-x-2">
-                <img
-                  src="/c5-short-logo.webp"
-                  alt="C5 Logo"
-                  className="h-[1em] w-auto"
-                />
-                <span className="text-primary-600">Business Partner</span>
+                
+                <span className="text-primary-600"> C5 Business Partner</span>
               </div>
 
             </Link>

@@ -7,18 +7,26 @@ import CTASection from '../../components/common/CTASection'
 export default function TransformationServices() {
   return (
     <>
-      {/* Hero Section */}
+
       <Hero
         title="Unsere Leistungen"
+        subtitle="Excellence in Transformation seit 2007"
         description="Erfahren Sie mehr über unsere Dienstleistungen, die das Transformationskontinuum von C5 ausmachen."
-        
-        
+        primaryCTA={{
+          text: 'Leistungen entdecken',
+          href: '#organisation'
+        }}
+        secondaryCTA={{
+          text: 'Kulturanalyse verstehen',
+          href: '/transformationskontinuum/HumanSynergistics'
+        }}
+
       />
 
 
 
       {/* Beratung zur Unternehmenskultur Section */}
-      <section className="section-padding bg-gray-50">
+      <section id="organisation" className="section-padding bg-gray-50">
         <div className="container-width">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -55,7 +63,7 @@ export default function TransformationServices() {
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/team-meeting-discussion.webp"
+                  src="/images/c5-strategie.jpg"
                   alt="Team Meeting"
                   width={600}
                   height={450}
@@ -132,10 +140,11 @@ export default function TransformationServices() {
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
                 Mitarbeiter begleiten               </h2>
               <p className="text-gray-700 mb-6">
-                Ihre Mitarbeiter unterstüzen Ihr Potenzialen zu entfalten, in Krisen zu begleiten und Veränderungen anzunehmen.
+                Unterstützung ihrer Mitarbeiter und deren Potenzial entwickeln. Wir begleiten in Krisen und herausfordernden Aufgaben.
               </p>
               <p className="text-gray-700 mb-8">
-                Neben der klassischen Karriereplanung beraten wir Sie vor Auswahlgesprächen und Gehaltsverhandlungen, begleiten Sie als Führungspersönlichkeit bis hin zu einer beruflichen Neuorientierung. Als Berater und Coach stehen wir Ihnen in diesen vielfach entscheidenden Momenten zur Seite.                </p>
+                Neben der klassischen Karriereplanung bereiten wir auf Führungsaufgaben vor und unterstützen in persönlichen Krisen. 
+              </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start space-x-3">
                   <Brain className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
@@ -160,8 +169,8 @@ export default function TransformationServices() {
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/executive-portrait.webp"
-                  alt="Führungskraft Portrait"
+                  src="/images/c5-mario-egartner.png"
+                  alt="Mario Egartner Frankfurt Business Coach"
                   width={600}
                   height={450}
                   className="w-full h-full object-cover"
@@ -181,7 +190,7 @@ export default function TransformationServices() {
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/team-collaboration-postits.webp"
+                  src="/images/c5-hs.jpg"
                   alt="Team Kollaboration mit Post-its"
                   width={600}
                   height={450}
@@ -249,7 +258,7 @@ export default function TransformationServices() {
               <p className="text-gray-700 mb-6">
                 Individuelle Begleitung für Führungskräfte und Nachwuchstalente bei beruflichen Herausforderungen.
               </p>
-         
+
             </div>
 
             {/* Assessment Center */}
@@ -262,7 +271,7 @@ export default function TransformationServices() {
               <p className="text-gray-700 mb-6">
                 Wissenschaftlich fundierte Assessment Center für optimale Personalauswahl und -entwicklung.
               </p>
-              
+
             </div>
 
             {/* Outplacement */}
@@ -275,7 +284,7 @@ export default function TransformationServices() {
               <p className="text-gray-700 mb-6">
                 Professionelle Begleitung bei beruflichen Veränderungen - diskret und erfolgreich.
               </p>
-              
+
             </div>
           </div>
         </div>

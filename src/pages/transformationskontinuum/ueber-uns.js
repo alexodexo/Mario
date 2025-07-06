@@ -5,55 +5,14 @@ import CTASection from '../../components/common/CTASection'
 
 
 export default function TransformationAbout() {
-  const coreValues = [
-    {
-      icon: Award,
-      title: 'Kompetenz',
-      subtitle: 'Competence',
-      description: 'Mit über 20 Jahren Beratungserfahrung und wissenschaftlich fundierten Methoden bringen wir bewährte Expertise in jedes Projekt ein. Unser Team verfügt über tiefgreifende Fachkenntnisse in allen Bereichen der Transformation.',
-      color: 'primary',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      icon: Shield,
-      title: 'Kontinuität',
-      subtitle: 'Constancy',
-      description: 'Beständigkeit und Verlässlichkeit prägen unsere Arbeitsweise. Wir stehen für langfristige Partnerschaften und begleiten Sie durchgehend auf Ihrem Transformationsweg.',
-      color: 'navy',
-      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      icon: Heart,
-      title: 'Fürsorge',
-      subtitle: 'Care',
-      description: 'Wir sehen unsere Aufgabe darin, Menschen in ihrer Ganzheit und Einzigartigkeit wahrzunehmen, zu respektieren und zu fördern. Echte Fürsorge für unsere Kunden und deren Erfolg steht im Mittelpunkt.',
-      color: 'primary',
-      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      icon: Eye,
-      title: 'Offenheit',
-      subtitle: 'Candor',
-      description: 'Offene, ehrliche Kommunikation und transparente Prozesse sind unser Markenzeichen. Wir sprechen Klartext und schaffen Transparenz in allen Projektphasen.',
-      color: 'navy',
-      image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      icon: HeartHandshake,
-      title: 'Glaubwürdigkeit',
-      subtitle: 'Congruity',
-      description: 'Übereinstimmung zwischen Worten und Taten, zwischen Versprechen und Erfüllung. Unsere langjährige Erfolgsbilanz spricht für sich und macht uns zu einem verlässlichen Partner.',
-      color: 'primary',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-    }
-  ]
+  
 
   const teamMembers = [
     {
       name: 'Mario Egartner',
-      role: 'Gründer & Geschäftsführer',
+      role: 'Gründer & Gesamtverantwortlich',
       expertise: 'Business Coaching, Systemische Beratung, Organisationsentwicklung',
-      experience: 'Über 15 Jahre Coaching-Erfahrung, 7.000+ Einzelgespräche',
+      experience: 'Über 15 Jahre Coaching-Erfahrung, 200+ Projekte, 7.000+ Einzelgespräche',
       background: 'Nach seinem Studium der Betriebswirtschaftslehre mit Schwerpunkt Psychologie sammelte Mario wertvolle Erfahrungen bei Kienbaum, Gemini Consulting und Odgers & Berndtson, bevor er 2002 C5 Business Partner gründete.',
       image: '/team/mario-egartner.jpg'
     },
@@ -69,16 +28,32 @@ export default function TransformationAbout() {
       name: 'Brigitte Calmund',
       role: 'Senior Beraterin/Coach/Trainerin',
       expertise: 'Kulturanalyse, Teamdynamik, Diversity & Inclusion',
-      experience: 'Über 16 Jahre Expertise in Kulturwandel und Teamarbeit',
+      experience: 'Über 20 Jahre Expertise in Kulturwandel und Teamarbeit',
       background: 'Spezialistin für Human Synergistics Tools und nachhaltige Kulturveränderungen mit besonderem Fokus auf Diversität und Integration.',
       image: '/team/brigitte-calmund.jpg'
     },
     {
       name: 'Christof Schlachte',
       role: 'Senior Berater/Coach/Trainer',
-      expertise: 'Assessment Center, Eignungsdiagnostik, Executive Coaching',
+      expertise: 'Personalentwicklung, Executive Coaching',
       experience: 'Über 20 Jahre Erfahrung in Personaldiagnostik und -entwicklung',
-      background: 'Führender Experte für Eignungsdiagnostik und Assessment-Verfahren mit fundierter Ausbildung in psychologischer Diagnostik.',
+      background: 'Führender Experte im Bereich Personalentwicklung und Coaching. Expertise in Ausbildung von Coaches.',
+      image: '/team/christof-schlachte.jpg'
+    },
+    {
+      name: 'Christine Hock',
+      role: 'Senior Berater/Diagnostik',
+      expertise: 'Leadership Diagnostik und Assessmentcenter',
+      experience: 'Über 15 Jahre Erfahrung in Personaldiagnostik und -entwicklung',
+      background: 'Führende Expertin im Bereich Personalentwicklung und -diagnostik. Expertise in Entiwcklung und Durchführung von Leadership Assessment.',
+      image: '/team/christof-schlachte.jpg'
+    },
+    {
+      name: 'Tina Wahi',
+      role: 'Senior Berater/Diagnostik',
+      expertise: 'Leadership Diagnostik und Assessmentcenter',
+      experience: 'Über 13 Jahre Erfahrung in Personaldiagnostik und -entwicklung',
+      background: 'Führende Expertin im Bereich Personalentwicklung und -diagnostik. Expertise in Entiwcklung und Durchführung von Leadership Assessment.',
       image: '/team/christof-schlachte.jpg'
     }
   ]
@@ -172,56 +147,29 @@ export default function TransformationAbout() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary-100 to-navy-100 rounded-xl overflow-hidden shadow-lg">
-                <div className="w-full h-full flex items-center justify-center">
-                  <Users className="h-32 w-32 text-primary-600" />
-                </div>
+              <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-100 rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Team bei der Zusammenarbeit"
+                  className="w-full h-full object-cover"
+                />
               </div>
+
             </div>
+
+
           </div>
         </div>
       </section>
 
       {/* Core Values - Die 5 Cs nach Warren Bennis - FÜNFTE SEKTION */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Die 5 Cs unserer Partnerschaft</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Fünf Vertrauenselemente nach Warren Bennis - weil echter Erfolg auf Vertrauen basiert
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {coreValues.map((value, index) => {
-              const IconComponent = value.icon
-              if (!IconComponent) {
-                console.error('Icon component is undefined for value:', value.title)
-                return null
-              }
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-all duration-200"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-blue-100 text-blue-600">
-                    <IconComponent className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-lg font-bold text-blue-900 mb-2">{value.title}</h3>
-                  <p className="text-sm font-medium text-blue-600 mb-3">{value.subtitle}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Statistics */}
       <section className="section-padding bg-navy-900 text-white">
         <div className="container-width">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Vertrauen durch Erfahrung</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Vertrauen durch Erfahrung</h2>
             <p className="text-xl text-gray-300">Unsere Erfolgsbilanz in Zahlen</p>
           </div>
 
@@ -247,7 +195,7 @@ export default function TransformationAbout() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="section-padding bg-white">
+      <section id="team" className="section-padding bg-gray-50">
         <div className="container-width">
           <div className="text-center mb-16">
             <h2 className="section-title">Unser Expertenteam</h2>
@@ -264,9 +212,7 @@ export default function TransformationAbout() {
               >
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 bg-gradient-to-br from-primary-100 to-navy-100 rounded-full flex items-center justify-center">
-                      <User className="h-12 w-12 text-primary-600" />
-                    </div>
+
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-navy-900 mb-2">{member.name}</h3>
