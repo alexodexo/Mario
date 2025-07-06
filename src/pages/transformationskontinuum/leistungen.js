@@ -115,11 +115,11 @@ export default function TransformationServices() {
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Führungskräfte in ihrer Teamverantwortung stärken</span>
+                  <span className="text-gray-700">Führungskräfte in Ihrer Teamverantwortung stärken</span>
                 </li>
               </ul>
               <p className="text-gray-700 mb-8">
-                Unterstützen Sie ihre Teams und Führungskräfte in Ihrer Entwicklung
+                Unterstützen Sie Ihre Teams und Führungskräfte in Ihrer Entwicklung
               </p>
               <Link
                 href="/transformationskontinuum/kontakt"
@@ -140,7 +140,7 @@ export default function TransformationServices() {
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
                 Mitarbeiter begleiten               </h2>
               <p className="text-gray-700 mb-6">
-                Unterstützung ihrer Mitarbeiter und deren Potenzial entwickeln. Wir begleiten in Krisen und herausfordernden Aufgaben.
+                Unterstützung Ihrer Mitarbeiter und deren Potenzial entwickeln. Wir begleiten in Krisen und herausfordernden Aufgaben.
               </p>
               <p className="text-gray-700 mb-8">
                 Neben der klassischen Karriereplanung bereiten wir auf Führungsaufgaben vor und unterstützen in persönlichen Krisen. 
@@ -215,7 +215,7 @@ export default function TransformationServices() {
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Zielsetzung einer kooperativ und konstruktiven Unternehmsnkultur </span>
+                  <span className="text-gray-700">Zielsetzung einer kooperativen und konstruktiven Unternehmenskultur </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
@@ -243,7 +243,7 @@ export default function TransformationServices() {
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
               Sonderthemen            </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Folgende Thmen runden unser Leistungsportfolio ab             </p>
+              Folgende Themen runden unser Leistungsportfolio ab             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

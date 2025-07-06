@@ -107,7 +107,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-4">Von der Kulturbererhebung bis zur systemische Implementierung </h2>
+            <h2 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-4">Von der Kulturerhebung bis zur systemische Implementierung </h2>
           </div>
 
           {/* Three Levels of Transformation */}

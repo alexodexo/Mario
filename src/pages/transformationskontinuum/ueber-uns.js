@@ -45,7 +45,7 @@ export default function TransformationAbout() {
       role: 'Senior Berater/Diagnostik',
       expertise: 'Leadership Diagnostik und Assessmentcenter',
       experience: 'Über 15 Jahre Erfahrung in Personaldiagnostik und -entwicklung',
-      background: 'Führende Expertin im Bereich Personalentwicklung und -diagnostik. Expertise in Entiwcklung und Durchführung von Leadership Assessment.',
+      background: 'Führende Expertin im Bereich Personalentwicklung und -diagnostik. Expertise in Entwicklung und Durchführung von Leadership Assessment.',
       image: '/team/christof-schlachte.jpg'
     },
     {
@@ -53,7 +53,7 @@ export default function TransformationAbout() {
       role: 'Senior Berater/Diagnostik',
       expertise: 'Leadership Diagnostik und Assessmentcenter',
       experience: 'Über 13 Jahre Erfahrung in Personaldiagnostik und -entwicklung',
-      background: 'Führende Expertin im Bereich Personalentwicklung und -diagnostik. Expertise in Entiwcklung und Durchführung von Leadership Assessment.',
+      background: 'Führende Expertin im Bereich Personalentwicklung und -diagnostik. Expertise in Entwicklung und Durchführung von Leadership Assessment.',
       image: '/team/christof-schlachte.jpg'
     }
   ]
