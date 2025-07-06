@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle, Calendar } from 'lucide-react'
+import Hero from '../../components/common/Hero'
 
 export default function TransformationContact() {
   const [formData, setFormData] = useState({
@@ -111,308 +112,93 @@ export default function TransformationContact() {
 
   return (
     <>
-      {/* Hero Section with Video Background */}
-      <section className="relative text-white overflow-hidden min-h-screen flex items-center">
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            onError={(e) => e.target.style.display = 'none'}
-          >
-            <source
-              src="https://cdn.pixabay.com/vimeo/453433081/businessman%20-%2049060.mp4?width=1280&hash=f5ac65dad89d4d2eeb20c5e2c5b4f2e1f0ab79b8"
-              type="video/mp4"
-            />
-          </video>
-          {/* Dark Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/60" />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/60 to-purple-900/80" />
-        </div>
+      {/* Hero Section */}
+      <Hero
+        title="Kontakt aufnehmen"
+        subtitle="Ihr Weg zu uns"
+        description="Lassen Sie uns über Ihre Herausforderungen sprechen, wir freuen uns erstes Kennenlernen."
+        primaryCTA={{
+          text: 'E-Mail senden',
+          href: 'mailto:berater@c5-business-partner.de'
+        }}
+        secondaryCTA={{
+          text: 'Termin vereinbaren',
+          href: '#booking-section'
+        }}
+      />
 
-        <div className="container mx-auto px-4 py-16 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 drop-shadow rounded-xl bg-orange-600 text-white px-4 py-2 inline-block">
-                Kontakt aufnehmen
-              </h1>
-              <p className="text-2xl sm:text-3xl text-blue-200 font-semibold mb-8 drop-shadow-md">
-                Lassen Sie uns über Ihre Herausforderungen sprechen
-              </p>
-              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
-                Wir freuen uns auf ein unverbindliches Erstgespräch mit Ihnen.
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="tel:069-97534440"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-blue-900 bg-white border border-transparent rounded-lg shadow-lg hover:bg-gray-50 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group backdrop-blur-sm"
-              >
-                <Phone className="mr-3 h-6 w-6" />
-                Direkt anrufen
-              </a>
-
-              <a
-                href="mailto:berater@c5-business-partner.de"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white rounded-lg hover:bg-white hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
-              >
-                <Mail className="mr-3 h-6 w-6" />
-                E-Mail senden
-              </a>
-
-              <button
-                onClick={scrollToBooking}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600/80 backdrop-blur-sm border-2 border-blue-400 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition-all duration-200 group"
-              >
-                <Calendar className="mr-3 h-6 w-6" />
-                Termin vereinbaren
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Contact Section - Kompakter */}
-      <section className="py-12 bg-white">
+      {/* Kontaktinformationen - Zentrierte Sektion */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-bold text-blue-900 mb-4">
-                Beratungsanfrage stellen
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Beschreiben Sie uns Ihr Anliegen. Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.
-              </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">
+              Kontaktinformationen
+            </h2>
+            <p className="text-xl text-gray-600 mb-12">
+              Erreichen Sie uns auf verschiedenen Wegen - wir sind für Sie da
+            </p>
 
-              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 py-2 border ${formErrors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
-                      placeholder="Ihr Name"
-                    />
-                    {formErrors.name && <span className="text-red-600 text-xs">{formErrors.name}</span>}
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      E-Mail *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 py-2 border ${formErrors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
-                      placeholder="ihre.email@unternehmen.de"
-                    />
-                    {formErrors.email && <span className="text-red-600 text-xs">{formErrors.email}</span>}
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Address */}
+              <div className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                  <MapPin className="h-8 w-8" />
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                      Unternehmen *
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      required
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 py-2 border ${formErrors.company ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
-                      placeholder="Ihr Unternehmen"
-                    />
-                    {formErrors.company && <span className="text-red-600 text-xs">{formErrors.company}</span>}
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Telefon *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 py-2 border ${formErrors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
-                      placeholder="069 - 123 456"
-                    />
-                    {formErrors.phone && <span className="text-red-600 text-xs">{formErrors.phone}</span>}
-                  </div>
+                <h3 className="font-semibold text-blue-900 mb-2">Adresse</h3>
+                <div className="text-gray-600 text-sm space-y-1 mb-4">
+                  <p>{contactInfo.address.street}</p>
+                  <p>{contactInfo.address.building}</p>
+                  <p>{contactInfo.address.city}</p>
+                  <p className="text-xs text-gray-500">{contactInfo.address.district}</p>
                 </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                    Interessensbereich *
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border ${formErrors.service ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
-                  >
-                    <option value="">Bitte wählen Sie...</option>
-                    {serviceOptions.map((option, index) => (
-                      <option key={index} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                  {formErrors.service && <span className="text-red-600 text-xs">{formErrors.service}</span>}
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Nachricht *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border ${formErrors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none`}
-                    placeholder="Beschreiben Sie uns Ihre Herausforderungen und Ziele..."
-                  />
-                  {formErrors.message && <span className="text-red-600 text-xs">{formErrors.message}</span>}
-                </div>
-
-                {/* Form Status Messages */}
-                {formStatus === 'success' && (
-                  <div className="flex items-center space-x-2 text-green-600 bg-green-50 p-3 rounded-lg">
-                    <CheckCircle className="h-4 w-4" />
-                    <span className="text-sm">Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.</span>
-                  </div>
-                )}
-
-                {formStatus === 'error' && (
-                  <div className="flex items-center space-x-2 text-red-600 bg-red-50 p-3 rounded-lg">
-                    <AlertCircle className="h-4 w-4" />
-                    <span className="text-sm">Es gab einen Fehler. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.</span>
-                  </div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full px-6 py-3 text-base font-semibold text-white bg-blue-600 border border-transparent rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                <a
+                  href={`https://maps.app.goo.gl/JHc7ChhxRuT1MA4C8`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 border border-blue-200 rounded-full hover:bg-blue-100 transition-colors duration-200"
                 >
-                  {isSubmitting ? (
-                    <span className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2" />
-                      Wird gesendet...
-                    </span>
-                  ) : (
-                    <span className="flex items-center justify-center">
-                      Anfrage senden
-                      <Send className="ml-2 h-4 w-4" />
-                    </span>
-                  )}
-                </button>
-              </form>
-            </div>
+                  <MapPin className="h-4 w-4 mr-2" />
+                  Wegbeschreibung
+                </a>
+              </div>
 
-            {/* Contact Information - Kompakter */}
-            <div>
-              <h2 className="text-2xl font-bold text-blue-900 mb-4">
-                Kontaktinformationen
-              </h2>
-              <div className="space-y-6">
-                {/* Address */}
-                <div className="flex items-start space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex-shrink-0">
-                    <MapPin className="h-5 w-5" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-blue-900 mb-1">Adresse</h3>
-                    <div className="text-gray-600 text-sm space-y-1 mb-3">
-                      <p>{contactInfo.address.street}</p>
-                      <p>{contactInfo.address.building}</p>
-                      <p>{contactInfo.address.city}</p>
-                      <p className="text-xs text-gray-500">{contactInfo.address.district}</p>
-                    </div>
-                    <a
-                      href={`https://maps.app.goo.gl/JHc7ChhxRuT1MA4C8`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 py-1 text-xs font-medium text-blue-600 bg-blue-50 border border-blue-200 rounded-full hover:bg-blue-100 transition-colors duration-200"
-                    >
-                      <MapPin className="h-3 w-3 mr-1" />
-                      Wegbeschreibung
-                    </a>
-                  </div>
+              {/* Phone */}
+              <div className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                  <Phone className="h-8 w-8" />
                 </div>
+                <h3 className="font-semibold text-blue-900 mb-2">Telefon</h3>
+                <a
+                  href={`tel:${contactInfo.phone.replace(/\s|-/g, '')}`}
+                  className="text-gray-600 hover:text-blue-600 transition-colors duration-200 text-lg font-medium"
+                >
+                  {contactInfo.phone}
+                </a>
+              </div>
 
-                {/* Phone */}
-                <div className="flex items-start space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex-shrink-0">
-                    <Phone className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-blue-900 mb-1">Telefon</h3>
-                    <a
-                      href={`tel:${contactInfo.phone.replace(/\s|-/g, '')}`}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
-                    >
-                      {contactInfo.phone}
-                    </a>
-                  </div>
+              {/* Email */}
+              <div className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                  <Mail className="h-8 w-8" />
                 </div>
+                <h3 className="font-semibold text-blue-900 mb-2">E-Mail</h3>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm break-words"
+                >
+                  {contactInfo.email}
+                </a>
+              </div>
 
-                {/* Email */}
-                <div className="flex items-start space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex-shrink-0">
-                    <Mail className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-blue-900 mb-1">E-Mail</h3>
-                    <a
-                      href={`mailto:${contactInfo.email}`}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
-                    >
-                      {contactInfo.email}
-                    </a>
-                  </div>
+              {/* Hours */}
+              <div className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                  <Clock className="h-8 w-8" />
                 </div>
-
-                {/* Hours */}
-                <div className="flex items-start space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex-shrink-0">
-                    <Clock className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-blue-900 mb-1">Geschäftszeiten</h3>
-                    <div className="text-gray-600 text-sm space-y-1">
-                      <p>{contactInfo.hours.weekdays}</p>
-                      <p className="text-xs">{contactInfo.hours.flexible}</p>
-                    </div>
-                  </div>
+                <h3 className="font-semibold text-blue-900 mb-2">Geschäftszeiten</h3>
+                <div className="text-gray-600 text-sm space-y-1">
+                  <p>{contactInfo.hours.weekdays}</p>
+                  <p className="text-xs text-gray-500">{contactInfo.hours.flexible}</p>
                 </div>
               </div>
             </div>
@@ -420,24 +206,11 @@ export default function TransformationContact() {
         </div>
       </section>
 
-      {/* Cal.com Integration Section with Video Background */}
-      <section id="booking-section" className="relative py-16 bg-blue-900 overflow-hidden">
+      {/* Cal.com Integration Section */}
+      <section id="booking-section" className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
-            onError={(e) => e.target.style.display = 'none'}
-          >
-            <source
-              src="https://cdn.pixabay.com/vimeo/453433081/businessman%20-%2049060.mp4?width=1280&hash=f5ac65dad89d4d2eeb20c5e2c5b4f2e1f0ab79b8"
-              type="video/mp4"
-            />
-          </video>
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-blue-900/70" />
+          <div className="absolute inset-0 bg-navy-900" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -464,6 +237,170 @@ export default function TransformationContact() {
                   title="Terminbuchung Cal.com"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form - Zentrierte Sektion */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+                Beratungsanfrage stellen
+              </h2>
+              <p className="text-xl text-gray-600">
+                Beschreiben Sie uns Ihr Anliegen. Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 border ${formErrors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
+                      placeholder="Ihr Name"
+                    />
+                    {formErrors.name && <span className="text-red-600 text-sm mt-1 block">{formErrors.name}</span>}
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      E-Mail *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 border ${formErrors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
+                      placeholder="ihre.email@unternehmen.de"
+                    />
+                    {formErrors.email && <span className="text-red-600 text-sm mt-1 block">{formErrors.email}</span>}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      Unternehmen *
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      required
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 border ${formErrors.company ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
+                      placeholder="Ihr Unternehmen"
+                    />
+                    {formErrors.company && <span className="text-red-600 text-sm mt-1 block">{formErrors.company}</span>}
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Telefon *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 border ${formErrors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
+                      placeholder="069 - 123 456"
+                    />
+                    {formErrors.phone && <span className="text-red-600 text-sm mt-1 block">{formErrors.phone}</span>}
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    Interessensbereich *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    required
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className={`w-full px-4 py-3 border ${formErrors.service ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200`}
+                  >
+                    <option value="">Bitte wählen Sie...</option>
+                    {serviceOptions.map((option, index) => (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                  {formErrors.service && <span className="text-red-600 text-sm mt-1 block">{formErrors.service}</span>}
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Nachricht *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className={`w-full px-4 py-3 border ${formErrors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none`}
+                    placeholder="Beschreiben Sie uns Ihre Herausforderungen und Ziele..."
+                  />
+                  {formErrors.message && <span className="text-red-600 text-sm mt-1 block">{formErrors.message}</span>}
+                </div>
+
+                {/* Form Status Messages */}
+                {formStatus === 'success' && (
+                  <div className="flex items-center space-x-3 text-green-600 bg-green-50 p-4 rounded-lg">
+                    <CheckCircle className="h-5 w-5 flex-shrink-0" />
+                    <span className="text-sm">Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.</span>
+                  </div>
+                )}
+
+                {formStatus === 'error' && (
+                  <div className="flex items-center space-x-3 text-red-600 bg-red-50 p-4 rounded-lg">
+                    <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                    <span className="text-sm">Es gab einen Fehler. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.</span>
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full px-8 py-4 text-lg font-semibold text-white bg-blue-600 border border-transparent rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-3" />
+                      Wird gesendet...
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center">
+                      Anfrage senden
+                      <Send className="ml-3 h-5 w-5" />
+                    </span>
+                  )}
+                </button>
+              </form>
             </div>
           </div>
         </div>
