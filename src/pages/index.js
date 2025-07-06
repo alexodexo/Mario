@@ -107,7 +107,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-4">Von der Kulturerhebung bis zur systemische Implementierung </h2>
+            <h2 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-4">Von der Kulturerhebung bis zur systematische Implementierung </h2>
           </div>
 
           {/* Three Levels of Transformation */}
@@ -176,7 +176,7 @@ export default function HomePage() {
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Transformationsberatung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Teams</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
-                  Teams unterstützen, symbiosieren und weiterentwickeln. Wir schaffen 
+                  Teams unterstützen, vernetzen und weiterentwickeln. Wir schaffen 
                   Verbesserungen in der Zusammenarbeit und Teamdynamik.
                 </p>
               </div>
@@ -222,7 +222,7 @@ export default function HomePage() {
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Coachingbegleitung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Führungskräfte</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
-                  Ihre Mitarbeiter unterstüzen Ihr Potenzialen zu entfalten, in Krisen zu begleiten und Veränderungen anzunehmen.
+                  Ihre Mitarbeiter unterstützen Ihre Potenziale zu entfalten, in Krisen zu begleiten und Veränderungen anzunehmen.
                 </p>
               </div>
 

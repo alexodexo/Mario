@@ -116,7 +116,7 @@ export default function TransformationContact() {
       <Hero
         title="Kontakt aufnehmen"
         subtitle="Ihr Weg zu uns"
-        description="Lassen Sie uns über Ihre Herausforderungen sprechen, wir freuen uns erstes Kennenlernen."
+        description="Lassen Sie uns über Ihre Herausforderungen sprechen, wir freuen uns auf ein erstes Kennenlernen."
         primaryCTA={{
           text: 'E-Mail senden',
           href: 'mailto:berater@c5-business-partner.de'
