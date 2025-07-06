@@ -141,7 +141,7 @@ export default function HumanSynergistics() {
                         <div className="relative">
                             <div className="aspect-square max-w-md mx-auto">
                                 <Image
-                                    src="http://margonline.com/wp-content/themes/astra/assets/images/diagram-11.png"
+                                    src="/images/hs/circumplex.webp"
                                     alt="Human Synergistics Circumplex Diagramm"
                                     width={400}
                                     height={400}
@@ -169,7 +169,7 @@ export default function HumanSynergistics() {
                     <div className="mb-16">
                         <div className="relative max-w-6xl mx-auto">
                             <Image
-                                src="https://margonline.com/wp-content/uploads/2022/10/Diagram-2.png"
+                                src="/images/hs/circumplex2.webp"
                                 alt="Human Synergistics Program Impact Diagramm"
                                 width={1200}
                                 height={600}
@@ -287,7 +287,7 @@ export default function HumanSynergistics() {
                     </div>
 
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-navy-900 mb-6">Für Manager</h2>
+                        <h2 className="text-3xl font-bold text-navy-900 mb-6">Für Teams</h2>
                     </div>
 
                     <div className="bg-gray-50 rounded-xl p-8 mb-16">
