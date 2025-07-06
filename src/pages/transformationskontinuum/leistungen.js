@@ -207,7 +207,7 @@ export default function TransformationServices() {
                 Die enge Kooperation zwischen C5 Business Partner und Human Synergistics verbindet wissenschaftlich fundierte Diagnostik mit innovativen Coaching.
               </p>
               <p className="text-gray-700 mb-8">
-                Damit erzielen wir eine wirksamen Entwicklungspfad von Leadership und kulturellem Wandel.               </p>
+                Damit erzielen wir einen wirksamen Entwicklungspfad von Leadership und kulturellem Wandel.               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />

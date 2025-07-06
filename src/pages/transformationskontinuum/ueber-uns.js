@@ -102,7 +102,7 @@ export default function TransformationAbout() {
 
   const philosophy = {
     title: "Unser Geheimnis? Wir lieben unsere Arbeit und sind ein Netzwerk aus warmer Hand.",
-    subtitle: "C5 - Wir vertrauen uns über Jahre einander an",
+    subtitle: "C5 - Wir vertrauen einander seit Jahren",
     description: "Unsere Berater kennen sich seit über 20 Jahren und bringen sich nach ihren Anforderungen als Berater, Mediator und Coach ein. Mit über 25 Jahren Erfahrung in verschiedenen Branchen sind wir ein äußerst verlässlicher Partner. Wir nehmen uns Ihrer Herausforderungen an und widmen uns unseren Projekten mit maximaler Energie und Aufmerksamkeit."
   }
 
