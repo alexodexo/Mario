@@ -662,7 +662,7 @@ export default function AGB() {
               <div className="bg-gray-50 border border-gray-300 rounded-xl p-6">
                 <p className="text-gray-700 text-center">
                   <strong>
-                    AGB`s geltend 11.&nbsp;Februar&nbsp;2007 der C5&nbsp;Business&nbsp;Partner / Frankfurt Business Coach / Gründer Mario&nbsp;Egartner
+                    AGBs geltend 11.&nbsp;Februar&nbsp;2007 der C5&nbsp;Business&nbsp;Partner / Frankfurt Business Coach / Gründer Mario&nbsp;Egartner
                   </strong>
                 </p>
               </div>
