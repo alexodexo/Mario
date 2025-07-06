@@ -76,7 +76,7 @@ export default function HomePage() {
             onError={(e) => e.target.style.display = 'none'}
           >
             <source
-              src="https://bwed8tnhqzhe5qrs.public.blob.vercel-storage.com/WhatsApp%20Video%202025-06-07%20at%2021.33.55-rUiRQfeCeeyKwkkV3kzLjp97v2NscT.mp4"
+              src="https://dnflishnbsfv9dl6.public.blob.vercel-storage.com/website_final-PODyZnhIvG46HwR8g6oPqlRpLShxNa.mp4"
               type="video/mp4"
             />
           </video>
@@ -112,6 +112,8 @@ export default function HomePage() {
 
           {/* Three Levels of Transformation */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+
+
 
             {/* Level 1: Kulturberatung */}
             <div className="bg-gradient-to-br from-blue-600 to-blue-400  rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1">
@@ -152,7 +154,7 @@ export default function HomePage() {
 
               <Link
                 href="/transformationskontinuum/leistungen#organisation"
-                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-white text-gray-900 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
+                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-[#f56518] text-white rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
               >
                 Organisationslösungen
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -174,7 +176,7 @@ export default function HomePage() {
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-center">Transformationsberatung</h3>
                 <p className="text-base lg:text-lg font-semibold text-white/80 mb-3 lg:mb-4 text-center">Team & Führungskräfte</p>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-6">
-                  Teams unterstützen, symbiosieren und weiterentwickeln. Wir schaffen nachhaltige
+                  Teams unterstützen, symbiosieren und weiterentwickeln. Wir schaffen 
                   Verbesserungen in der Zusammenarbeit und Teamdynamik.
                 </p>
               </div>
@@ -198,7 +200,7 @@ export default function HomePage() {
 
               <Link
                 href="/transformationskontinuum/leistungen#team"
-                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-white text-gray-900 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
+                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-[#f56518] text-white rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
               >
                 Teamlösungen
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -209,7 +211,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 md:col-span-2 lg:col-span-1">
               <div className="aspect-video mb-4 lg:mb-6 rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="/images/c5-coaching.jpg"
                   alt="Coaching-Gespräch zwischen zwei Menschen mit KI-Elementen"
                   className="w-full h-full object-cover"
                 />
@@ -243,7 +245,7 @@ export default function HomePage() {
 
               <Link
                 href="/transformationskontinuum/leistungen#coaching"
-                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-white text-gray-900 rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
+                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-[#f56518] text-white rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 group"
               >
                 Coachinglösung
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -258,7 +260,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#f56518] mb-6">
                 {philosophy.subtitle}
               </h2>
               <blockquote className="text-2xl font-light text-blue-600 italic mb-6 leading-relaxed">
@@ -304,10 +306,10 @@ export default function HomePage() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white mb-4">
                     <IconComponent className="h-8 w-8" />
                   </div>
-                  <div className="text-4xl sm:text-5xl font-bold text-orange-400 mb-2">
+                  <div className="text-4xl sm:text-5xl font-bold  mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-800 font-medium">
+                  <div className=" font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -358,7 +360,7 @@ export default function HomePage() {
         {/* Contact Section */}
         <div className=" border-white/20 pt-16">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold mb-6 drop-shadow  bg-orange-600 text-white px-4 py-2 inline-block">
+            <h2 className="text-5xl font-bold mb-6 drop-shadow   text-white px-4 py-2 inline-block">
               Lassen Sie uns sprechen
             </h2>
             <p className="text-xl text-blue-100 mb-12 leading-relaxed">
@@ -395,7 +397,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/transformationskontinuum/kontakt"
-                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-blue-600 bg-white border border-transparent rounded-lg shadow-lg hover:bg-blue-50 transition-colors duration-200"
+                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold bg-[#f56518] text-white border border-transparent rounded-lg shadow-lg hover:bg-blue-50 transition-colors duration-200"
                 >
                   Strategiegespräch vereinbaren
                   <ArrowRight className="ml-2 h-5 w-5" />
