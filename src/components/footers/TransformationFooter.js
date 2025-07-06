@@ -122,7 +122,7 @@ export default function TransformationFooter() {
             <div className="flex items-center mb-4 lg:mb-0">
               <div className="flex items-center text-2xl font-bold text-white mr-8">
               
-                <span className="text-orange">C5 Business Partner</span>
+                <span className="text-orange ">C5 Business Partner</span>
               </div>
               <div className="flex space-x-4">
                 <a
