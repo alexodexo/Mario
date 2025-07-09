@@ -127,84 +127,121 @@ export default function TransformationContact() {
         }}
       />
 
-      {/* Kontaktinformationen - Zentrierte Sektion */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">
-              Kontaktinformationen
-            </h2>
-            <p className="text-xl text-gray-600 mb-12">
-              Erreichen Sie uns auf verschiedenen Wegen - wir sind für Sie da
-            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Address */}
-              <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
-                  <MapPin className="h-8 w-8" />
-                </div>
-                <h3 className="font-semibold text-blue-900 mb-2">Adresse</h3>
-                <div className="text-gray-600 text-sm space-y-1 mb-4">
-                  <p>{contactInfo.address.street}</p>
-                  <p>{contactInfo.address.building}</p>
-                  <p>{contactInfo.address.city}</p>
-                  <p className="text-xs text-gray-500">{contactInfo.address.district}</p>
-                </div>
-                <a
-                  href={`https://maps.app.goo.gl/JHc7ChhxRuT1MA4C8`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 border border-blue-200 rounded-full hover:bg-blue-100 transition-colors duration-200"
-                >
-                  <MapPin className="h-4 w-4 mr-2" />
-                  Wegbeschreibung
-                </a>
-              </div>
 
-              {/* Phone */}
-              <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
-                  <Phone className="h-8 w-8" />
-                </div>
-                <h3 className="font-semibold text-blue-900 mb-2">Telefon</h3>
-                <a
-                  href={`tel:${contactInfo.phone.replace(/\s|-/g, '')}`}
-                  className="text-gray-600 hover:text-blue-600 transition-colors duration-200 text-lg font-medium"
-                >
-                  {contactInfo.phone}
-                </a>
-              </div>
+{/* Kontaktinformationen - Variante 1 */}
+<section className="py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">
+          Kontaktinformationen
+        </h2>
+        <p className="text-xl text-gray-600">
+          Erreichen Sie uns auf verschiedenen Wegen - wir sind für Sie da
+        </p>
+      </div>
 
-              {/* Email */}
-              <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
-                  <Mail className="h-8 w-8" />
-                </div>
-                <h3 className="font-semibold text-blue-900 mb-2">E-Mail</h3>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm break-words"
-                >
-                  {contactInfo.email}
-                </a>
-              </div>
-
-              {/* Hours */}
-              <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
-                  <Clock className="h-8 w-8" />
-                </div>
-                <h3 className="font-semibold text-blue-900 mb-2">Geschäftszeiten</h3>
-                <div className="text-gray-600 text-sm space-y-1">
-                  <p>{contactInfo.hours.weekdays}</p>
-                  <p className="text-xs text-gray-500">{contactInfo.hours.flexible}</p>
-                </div>
-              </div>
-            </div>
+      {/* Maps Integration + Contact Info Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        
+        {/* Maps Embed - Takes 2/3 width */}
+        <div className="lg:col-span-2">
+          <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg h-80">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.8123456789!2d8.6872843!3d50.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sG%C3%BCnthersburgallee%2082%2C%2060389%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1234567890123"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="C5 Business Partner Standort"
+            />
           </div>
         </div>
-      </section>
+
+        {/* Address Info - Takes 1/3 width */}
+        <div className="bg-blue-50 rounded-lg p-6 shadow-lg">
+          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+            <MapPin className="h-6 w-6" />
+          </div>
+          <h3 className="font-semibold text-blue-900 mb-3">Unser Standort</h3>
+          <div className="text-gray-700 text-sm space-y-1 mb-4">
+            <p className="font-medium">{contactInfo.address.street}</p>
+            <p>{contactInfo.address.building}</p>
+            <p>{contactInfo.address.city}</p>
+            <p className="text-xs text-gray-500">{contactInfo.address.district}</p>
+          </div>
+          <a
+            href={`https://maps.app.goo.gl/JHc7ChhxRuT1MA4C8`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors duration-200"
+          >
+            <MapPin className="h-4 w-4 mr-2" />
+            Wegbeschreibung
+          </a>
+        </div>
+      </div>
+
+      {/* Contact Cards Row */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        {/* Phone */}
+        <div className="text-center bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+            <Phone className="h-6 w-6" />
+          </div>
+          <h3 className="font-semibold text-blue-900 mb-2">Telefon</h3>
+          <a
+            href={`tel:${contactInfo.phone.replace(/\s|-/g, '')}`}
+            className="text-gray-700 hover:text-blue-600 transition-colors duration-200 text-lg font-medium block mb-2"
+          >
+            {contactInfo.phone}
+          </a>
+          <p className="text-sm text-gray-500">Direkter Kontakt</p>
+        </div>
+
+        {/* Email */}
+        <div className="text-center bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+            <Mail className="h-6 w-6" />
+          </div>
+          <h3 className="font-semibold text-blue-900 mb-2">E-Mail</h3>
+          <a
+            href={`mailto:${contactInfo.email}`}
+            className="text-gray-700 hover:text-blue-600 transition-colors duration-200 text-sm break-words block mb-2"
+          >
+            {contactInfo.email}
+          </a>
+          <p className="text-sm text-gray-500">Schriftlicher Kontakt</p>
+        </div>
+
+        {/* Hours */}
+        <div className="text-center bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+            <Clock className="h-6 w-6" />
+          </div>
+          <h3 className="font-semibold text-blue-900 mb-2">Geschäftszeiten</h3>
+          <div className="text-gray-700 text-sm space-y-1 mb-2">
+            <p className="font-medium">{contactInfo.hours.weekdays}</p>
+          </div>
+          <p className="text-xs text-gray-500">{contactInfo.hours.flexible}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
       {/* Cal.com Integration Section */}
       <section id="booking-section" className="relative py-16 overflow-hidden">
