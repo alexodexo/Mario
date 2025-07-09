@@ -7,7 +7,6 @@ export default function TransformationFooter() {
       title: 'Unternehmen',
       links: [
         { name: 'Über uns', href: '/transformationskontinuum/ueber-uns' },
-        { name: 'Unser Team', href: '/transformationskontinuum' },
         { name: 'Unsere Geschichte', href: '/transformationskontinuum/ueber-uns#timeline' },
         { name: 'Die 5 Cs', href: '/transformationskontinuum/ueber-uns#values' }
       ]
@@ -48,7 +47,6 @@ export default function TransformationFooter() {
   const quickLinks = [
     { name: 'Beratung anfragen', href: '/transformationskontinuum/kontakt', primary: true },
     { name: 'Termin buchen', href: '/transformationskontinuum/kontakt#booking-section', secondary: true },
-    { name: 'Direkt anrufen', href: 'tel:069-97534440', phone: true }
   ]
 
   return (
